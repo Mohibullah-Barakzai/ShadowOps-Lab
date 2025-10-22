@@ -60,3 +60,31 @@ For recruiters and reviewers, it signals a candidate who can **attack, defend, a
 ---
 
 ## 📂 Repo Skeleton
+
+---
+
+## 🤝 Contributing & Roadmap
+
+ShadowOps Lab is currently a **work in progress**. The roadmap is structured into clear phases:
+
+- **Phase 1 (MVP – Job Ready)** → Recon harness, SOC replay capsule, executive summary generator.  
+- **Phase 2 (Expansion)** → Supply chain simulator, IoT capsule, AI‑adversarial payloads.  
+- **Phase 3 (Global Shine)** → Post‑quantum audit, AI red/blue loop, professional docs & demo.
+
+### How to Contribute
+While this project is primarily my personal research lab, contributions are welcome in the form of:
+- **Issues** → Suggestions, bug reports, or feature ideas.  
+- **Pull Requests** → Small, focused improvements (scripts, docs, detection rules).  
+- **Discussions** → Feedback on methodology, reproducibility, or new attack/defense domains.  
+
+### Guidelines
+- Keep commits **atomic and reproducible**.  
+- Document changes clearly in `README.md` or `docs/`.  
+- Ensure scripts are **cross‑platform friendly** (Linux/macOS/Windows).  
+- Always prioritize **clarity, reproducibility, and reviewer impact**.  
+
+---
+
+## 📅 Project Status
+⚠️ **Note:** ShadowOps Lab is under active development. Phase 1 MVP is being built — expect rapid changes.  
+Follow the repo to watch progress as new modules and documentation are added.
