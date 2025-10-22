@@ -1,4 +1,4 @@
-echo "[*] Launching IoT Probe..."
+echo "[*] Run Summary → ..."
 offensive_harness/probes/iot_probe/iot_probe.sh | tee -a logs/iot_probe.log
 echo "[*] IoT Probe completed."
 
@@ -30,4 +30,9 @@ echo "[*] Aggregating probe summaries into summary.md..."
   done
 } > "$summary_md"
 
-echo "[*] Summary written to $summary_md"
+# --- Console One-Liner Summary ---
+echo "[*] Run Summary →" \
+     "IoT: $(grep 'summary:' logs/iot_probe.log | tail -n 1 | sed 's/summary: //')" "|" \
+     "SupplyChain: $(grep 'summary:' logs/supply_chain_probe.log | tail -n 1 | sed 's/summary: //')" "|" \
+     "Insider: $(grep 'summary:' logs/insider_threat_probe.log | tail -n 1 | sed 's/summary: //')" "|" \
+     "AI/ML: $(grep 'summary:' logs/ai_adversarial_probe.log | tail -n 1 | sed 's/summary: //')"
