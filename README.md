@@ -46,8 +46,4 @@ This dual approach ensures:
 - **Professional Docs + Demo Video** → publish on GitHub, LinkedIn, Medium.
 - **Branding** → position it as *“The Open‑Source Next‑Gen Pentest & SOC Training Framework.”*
 
-
-
-
-
 ## 📂 Repo Skeleton
