@@ -1,6 +1,8 @@
 # ShadowOps Lab
 **Multi‑Purpose Next‑Gen Penetration Testing & SOC Training Framework**
 
+> ShadowOps Lab is a reproducible, next‑gen security framework that trains you to **attack like a pentester and defend like a SOC analyst** — all in one lab.
+
 ---
 
 ## 🎯 Core Idea
@@ -25,6 +27,7 @@ This dual approach ensures:
   *“ShadowOps simulates tomorrow’s threats in a reproducible way.”*
 
 👉 This is enough to land interviews as a SOC Analyst or Junior Pentester.
+
 
 ---
 
