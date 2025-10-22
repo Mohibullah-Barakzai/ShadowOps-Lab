@@ -14,9 +14,18 @@ echo "[*] Launching AI/ML Adversarial Probe..."
 offensive_harness/probes/ai_adversarial_probe/ai_adversarial_probe.sh | tee -a logs/ai_adversarial_probe.log
 echo "[*] AI/ML Adversarial Probe completed."
 
-# --- Markdown Summary Aggregator ---
+# --- Markdown Summary Aggregator with Icons ---
 summary_md="logs/summary.md"
 echo "[*] Aggregating probe summaries into summary.md..."
+
+format_md_summary() {
+    case "$1" in
+        *"LOW"*) echo "🟢 $1" ;;
+        *"MEDIUM"*) echo "🟡 $1" ;;
+        *"HIGH"*) echo "🔴 $1" ;;
+        *) echo "$1" ;;
+    esac
+}
 
 {
   echo "# Probe Run Summary"
@@ -26,9 +35,11 @@ echo "[*] Aggregating probe summaries into summary.md..."
   for probe in iot_probe supply_chain_probe insider_threat_probe ai_adversarial_probe; do
       log_file="logs/${probe}.log"
       summary_line=$(grep "summary:" "$log_file" | tail -n 1 | sed 's/summary: //')
-      echo "| ${probe} | ${summary_line} |"
+      echo "| ${probe} | $(format_md_summary "$summary_line") |"
   done
 } > "$summary_md"
+
+echo "[*] Summary written to $summary_md"
 
 # --- Console One-Liner Summary with Icons ---
 format_summary() {
