@@ -26,8 +26,6 @@ This dual approach ensures:
 
 👉 This is enough to land interviews as a SOC Analyst or Junior Pentester.
 
----
-
 
 ---
 
@@ -37,7 +35,6 @@ This dual approach ensures:
 - **AI‑Adversarial Payload Generator** → bypass WAF/IDS with AI‑mutated payloads.
 - **Cross‑Platform Proof** → Linux, macOS, Windows reproducibility.
 
-
 ---
 
 ## 🌍 Phase 3 (Global Shine – 3–6 Months)
@@ -45,5 +42,6 @@ This dual approach ensures:
 - **Self‑Evolving Red/Blue AI Loop** → AI red team generates payloads, AI blue team trains detection rules.
 - **Professional Docs + Demo Video** → publish on GitHub, LinkedIn, Medium.
 - **Branding** → position it as *“The Open‑Source Next‑Gen Pentest & SOC Training Framework.”*
+
 
 ## 📂 Repo Skeleton
