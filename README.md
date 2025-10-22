@@ -26,6 +26,8 @@ This dual approach ensures:
 
 👉 This is enough to land interviews as a SOC Analyst or Junior Pentester.
 
+---
+
 
 ---
 
