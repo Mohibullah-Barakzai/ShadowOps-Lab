@@ -30,9 +30,19 @@ echo "[*] Aggregating probe summaries into summary.md..."
   done
 } > "$summary_md"
 
-# --- Console One-Liner Summary ---
-echo "[*] Run Summary →" \
-     "IoT: $(grep 'summary:' logs/iot_probe.log | tail -n 1 | sed 's/summary: //')" "|" \
-     "SupplyChain: $(grep 'summary:' logs/supply_chain_probe.log | tail -n 1 | sed 's/summary: //')" "|" \
-     "Insider: $(grep 'summary:' logs/insider_threat_probe.log | tail -n 1 | sed 's/summary: //')" "|" \
-     "AI/ML: $(grep 'summary:' logs/ai_adversarial_probe.log | tail -n 1 | sed 's/summary: //')"
+# --- Console One-Liner Summary with Icons ---
+format_summary() {
+    case "$1" in
+        *"LOW"*) echo "🟢 $1" ;;
+        *"MEDIUM"*) echo "🟡 $1" ;;
+        *"HIGH"*) echo "🔴 $1" ;;
+        *) echo "$1" ;;
+    esac
+}
+
+iot_summary=$(grep 'summary:' logs/iot_probe.log | tail -n 1 | sed 's/summary: //')
+supply_summary=$(grep 'summary:' logs/supply_chain_probe.log | tail -n 1 | sed 's/summary: //')
+insider_summary=$(grep 'summary:' logs/insider_threat_probe.log | tail -n 1 | sed 's/summary: //')
+ai_summary=$(grep 'summary:' logs/ai_adversarial_probe.log | tail -n 1 | sed 's/summary: //')
+
+echo "[*] Run Summary → IoT: $(format_summary "$iot_summary") | SupplyChain: $(format_summary "$supply_summary") | Insider: $(format_summary "$insider_summary") | AI/ML: $(format_summary "$ai_summary")"
