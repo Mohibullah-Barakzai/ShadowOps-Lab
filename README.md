@@ -28,4 +28,14 @@ This dual approach ensures:
 
 ---
 
+
+---
+
+## 🚀 Phase 2 (Expansion – 1–2 Months)
+- **Supply Chain Attack Simulator** → malicious dependency injection in CI/CD.
+- **IoT Exploit Capsule** → emulate smart devices (healthcare, home IoT).
+- **AI‑Adversarial Payload Generator** → bypass WAF/IDS with AI‑mutated payloads.
+- **Cross‑Platform Proof** → Linux, macOS, Windows reproducibility.
+
+
 ## 📂 Repo Skeleton
