@@ -38,4 +38,16 @@ This dual approach ensures:
 - **Cross‑Platform Proof** → Linux, macOS, Windows reproducibility.
 
 
+---
+
+## 🌍 Phase 3 (Global Shine – 3–6 Months)
+- **Post‑Quantum Crypto Audit Module** → flag weak algorithms, suggest PQC replacements.
+- **Self‑Evolving Red/Blue AI Loop** → AI red team generates payloads, AI blue team trains detection rules.
+- **Professional Docs + Demo Video** → publish on GitHub, LinkedIn, Medium.
+- **Branding** → position it as *“The Open‑Source Next‑Gen Pentest & SOC Training Framework.”*
+
+
+
+
+
 ## 📂 Repo Skeleton
