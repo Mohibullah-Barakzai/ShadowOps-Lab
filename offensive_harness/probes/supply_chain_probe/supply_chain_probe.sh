@@ -1,7 +1,7 @@
 #!/bin/bash
-# Supply Chain Probe - Phase 2 Stub
-# Purpose: Placeholder probe to validate harness integration
+# Supply Chain Probe - Stub with Summary
 
 echo "[Supply Chain Probe] Running stub probe..."
 echo "timestamp: $(date -u)"
 echo "status: OK (stub)"
+echo "summary: stub executed → severity: LOW"
