@@ -3,10 +3,11 @@
 
 ![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)
 ![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue)
-![Status](https://img.shields.io/badge/Status-Active-success)
+![Status](https://img.shields.io/badge/Status-In_Progress-yellow)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-> ShadowOps Lab is a reproducible, next‑gen security framework that trains you to **attack like a pentester and defend like a SOC analyst** — all in one lab.
+> ShadowOps Lab is a reproducible, next‑gen security framework that trains you to **attack like a pentester and defend like a SOC analyst** — all in one lab.  
+> ⚠️ **Note:** This project is under active development. Phase 1 MVP is being built — expect rapid changes.
 
 ---
 
@@ -32,7 +33,6 @@ This dual approach ensures:
   *“ShadowOps simulates tomorrow’s threats in a reproducible way.”*  
 
 👉 This is enough to land interviews as a SOC Analyst or Junior Pentester.  
-
 
 ---
 
