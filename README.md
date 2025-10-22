@@ -25,7 +25,7 @@ This dual approach ensures:
   *“ShadowOps simulates tomorrow’s threats in a reproducible way.”*
 
 👉 This is enough to land interviews as a SOC Analyst or Junior Pentester.
+
 ---
 
 ## 📂 Repo Skeleton
-
