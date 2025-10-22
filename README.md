@@ -88,3 +88,14 @@ While this project is primarily my personal research lab, contributions are welc
 ## 📅 Project Status
 ⚠️ **Note:** ShadowOps Lab is under active development. Phase 1 MVP is being built — expect rapid changes.  
 Follow the repo to watch progress as new modules and documentation are added.
+
+
+
+## 📈 Roadmap — Phase 2 (v2.0.0)
+
+Phase 2 expands ShadowOps Lab into new domains:
+- 🔒 Supply chain simulator with tampered package replay
+- 📡 IoT capsule with device replay logs
+- 🤖 AI‑adversarial payload generator using fuzzers
+
+See [docs/phase2_overview.md](docs/phase2_overview.md) for details.
