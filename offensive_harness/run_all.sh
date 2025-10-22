@@ -14,21 +14,20 @@ echo "[*] Launching AI/ML Adversarial Probe..."
 offensive_harness/probes/ai_adversarial_probe/ai_adversarial_probe.sh | tee -a logs/ai_adversarial_probe.log
 echo "[*] AI/ML Adversarial Probe completed."
 
-# --- Summary Aggregator ---
-echo "[*] Aggregating probe summaries into summary.json..."
+# --- Markdown Summary Aggregator ---
+summary_md="logs/summary.md"
+echo "[*] Aggregating probe summaries into summary.md..."
 
-summary_file="logs/summary.json"
-echo "{" > "$summary_file"
+{
+  echo "# Probe Run Summary"
+  echo
+  echo "| Probe | Summary |"
+  echo "|-------|---------|"
+  for probe in iot_probe supply_chain_probe insider_threat_probe ai_adversarial_probe; do
+      log_file="logs/${probe}.log"
+      summary_line=$(grep "summary:" "$log_file" | tail -n 1 | sed 's/summary: //')
+      echo "| ${probe} | ${summary_line} |"
+  done
+} > "$summary_md"
 
-# Extract the last 'summary:' line from each probe log
-for probe in iot_probe supply_chain_probe insider_threat_probe ai_adversarial_probe; do
-    log_file="logs/${probe}.log"
-    summary_line=$(grep "summary:" "$log_file" | tail -n 1 | sed 's/summary: //')
-    echo "  \"${probe}\": \"${summary_line}\"," >> "$summary_file"
-done
-
-# Remove trailing comma and close JSON
-sed -i '$ s/,$//' "$summary_file"
-echo "}" >> "$summary_file"
-
-echo "[*] Summary written to $summary_file"
+echo "[*] Summary written to $summary_md"
