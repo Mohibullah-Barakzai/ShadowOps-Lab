@@ -28,9 +28,6 @@ This dual approach ensures:
 
 ---
 
-
----
-
 ## 🚀 Phase 2 (Expansion – 1–2 Months)
 - **Supply Chain Attack Simulator** → malicious dependency injection in CI/CD.
 - **IoT Exploit Capsule** → emulate smart devices (healthcare, home IoT).
@@ -45,5 +42,6 @@ This dual approach ensures:
 - **Professional Docs + Demo Video** → publish on GitHub, LinkedIn, Medium.
 - **Branding** → position it as *“The Open‑Source Next‑Gen Pentest & SOC Training Framework.”*
 
+---
 
 ## 📂 Repo Skeleton
