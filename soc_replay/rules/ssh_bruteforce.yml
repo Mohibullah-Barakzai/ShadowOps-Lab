@@ -1,0 +1,13 @@
+title: SSH Brute Force Attempt
+id: 001
+description: Detects multiple failed SSH logins followed by a success
+logsource:
+  category: authentication
+  product: linux
+detection:
+  failed:
+    msg|contains: "Failed password"
+  success:
+    msg|contains: "Accepted password"
+  condition: failed and success
+level: high

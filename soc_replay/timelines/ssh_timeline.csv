@@ -1,0 +1,5 @@
+timestamp,event,severity
+Oct 22 22:15:01,Failed SSH login,🟡 MEDIUM
+Oct 22 22:15:05,Failed SSH login,🟡 MEDIUM
+Oct 22 22:15:09,Failed SSH login,🟡 MEDIUM
+Oct 22 22:15:12,Successful SSH login,🔴 HIGH

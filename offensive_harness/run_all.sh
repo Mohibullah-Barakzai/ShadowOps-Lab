@@ -1,15 +1,22 @@
+#!/bin/bash
+
 echo "[*] Run Summary → ..."
-offensive_harness/probes/iot_probe/iot_probe.sh | tee -a logs/iot_probe.log
+
+# IoT Probe
+probes/iot_probe/iot_probe.sh | tee -a logs/iot_probe.log
 echo "[*] IoT Probe completed."
 
+# Supply Chain Probe
 echo "[*] Launching Supply Chain Probe..."
-offensive_harness/probes/supply_chain_probe/supply_chain_probe.sh | tee -a logs/supply_chain_probe.log
+probes/supply_chain_probe/supply_chain_probe.sh | tee -a logs/supply_chain_probe.log
 echo "[*] Supply Chain Probe completed."
 
+# Insider Threat Probe
 echo "[*] Launching Insider Threat Probe..."
-offensive_harness/probes/insider_threat_probe/insider_threat_probe.sh | tee -a logs/insider_threat_probe.log
+offensive_harness/probes/insider_threat_probe.sh | tee -a logs/insider_threat_probe.log
 echo "[*] Insider Threat Probe completed."
 
+# AI/ML Adversarial Probe
 echo "[*] Launching AI/ML Adversarial Probe..."
 offensive_harness/probes/ai_adversarial_probe/ai_adversarial_probe.sh | tee -a logs/ai_adversarial_probe.log
 echo "[*] AI/ML Adversarial Probe completed."
@@ -55,5 +62,26 @@ iot_summary=$(grep 'summary:' logs/iot_probe.log | tail -n 1 | sed 's/summary: /
 supply_summary=$(grep 'summary:' logs/supply_chain_probe.log | tail -n 1 | sed 's/summary: //')
 insider_summary=$(grep 'summary:' logs/insider_threat_probe.log | tail -n 1 | sed 's/summary: //')
 ai_summary=$(grep 'summary:' logs/ai_adversarial_probe.log | tail -n 1 | sed 's/summary: //')
+
+# --- SOC Replay Integration ---
+echo "[*] Launching SOC Replay Capsule..."
+bash soc_replay/replay.sh | tee -a logs/soc_replay.log
+
+# Append SOC timeline into summary.md
+if [ -f soc_replay/timelines/ssh_timeline.csv ]; then
+  {
+    echo
+    echo "## SOC Replay Timeline"
+    echo
+    echo "| Timestamp | Event | Severity |"
+    echo "|-----------|-------|----------|"
+    tail -n +2 soc_replay/timelines/ssh_timeline.csv | while IFS=, read -r ts ev sev; do
+      printf "| %s | %s | %s |\n" "$ts" "$ev" "$sev"
+    done
+  } >> logs/summary.md
+fi
+
+echo "[*] SOC Replay Capsule completed."
+
 
 echo "[*] Run Summary → IoT: $(format_summary "$iot_summary") | SupplyChain: $(format_summary "$supply_summary") | Insider: $(format_summary "$insider_summary") | AI/ML: $(format_summary "$ai_summary")"
