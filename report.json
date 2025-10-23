@@ -1,0 +1,9 @@
+{
+  "executive_summary": "**Executive Summary:** Identified 4 findings (\ud83d\uded1 Critical: 1, \ud83d\udd34 High: 2, \ud83d\udfe0 Medium: 1). Weighted score 50 \u2192 \u26a0\ufe0f Medium Risk. Results are reproducible and documented for independent verification.",
+  "severity_counts": {
+    "Critical": 1,
+    "High": 2,
+    "Medium": 1
+  },
+  "weighted_score": 50
+}
