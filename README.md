@@ -111,6 +111,8 @@ $ python3 harness.py example.com
 [+] Vulns saved to outputs/example.com/.../vulns.txt
 [+] Reports written to report.md and report.json
 
+---
+
 
 📝 Sample Report (Markdown)
 Scan Report
@@ -127,12 +129,15 @@ Vulnerability Artifacts
 • 	Vulns file:
 • 	SHA256 checksum:
 • 	Count: 0
+---
 
 🔒 Reproducibility
 • 	Every run is timestamped
 • 	Each artifact has a SHA256 checksum
 • 	Logs are written per target
 • 	Reports are generated in both Markdown and JSON
+---
+
 
 🛠️ Roadmap
 • 	[x] Subdomain enumeration
@@ -143,3 +148,4 @@ Vulnerability Artifacts
 • 	[ ] Supply chain simulator
 • 	[ ] IoT exploit capsule
 
+---

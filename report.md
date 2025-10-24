@@ -5,16 +5,16 @@
 ---
 
 ### Recon Artifacts
-- Subdomains file: `outputs/example.com/2025-10-24T19:07:29Z/subdomains.txt`
-- SHA256 checksum: `4343526850db6c244ceb0c3c1353ae7ec8b4bf0542a2cbfe5d1483ebbedfe0b3`
-- Count: 10
+- Subdomains file: `outputs/--target/2025-10-24T20:36:40Z/subdomains.txt`
+- SHA256 checksum: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Count: 0
 
 ### Portscan Artifacts
-- Ports file: `outputs/example.com/2025-10-24T19:07:30Z/ports.txt`
-- SHA256 checksum: `458619dd3eda2997e7453811fa5342bae55d2d57c48ca25cac336e452f90a14b`
-- Count: 3
+- Ports file: `outputs/--target/2025-10-24T20:36:40Z/ports.txt`
+- SHA256 checksum: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Count: 0
 
 ### Vulnerability Artifacts
-- Vulns file: `outputs/example.com/2025-10-24T19:07:45Z/vulns.txt`
-- SHA256 checksum: `4fce84265af7c4ecd25dcac1b414fd3f0c306467d5d1d55c32725bb1803a45ad`
+- Vulns file: `outputs/--target/2025-10-24T20:36:40Z/vulns.txt`
+- SHA256 checksum: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
 - Count: 0

@@ -1,139 +1,151 @@
 #!/usr/bin/env python3
-"""
-ShadowOps-Lab Harness
-Audit‑grade, reproducible workflow for penetration testing and SOC analysis.
-Modules:
-- probes/subenum.py
-- probes/portscan.py
-- probes/vulnscan.py
-"""
-
-import sys
+import argparse
+import hashlib
 import json
-from collections import Counter, OrderedDict
-from probes import subenum
-from probes import portscan
-from probes import vulnscan
+import os
+import datetime
+import subprocess
 
+def sha256sum(filename):
+    h = hashlib.sha256()
+    with open(filename, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
-def generate_report(findings, subenum_meta, portscan_meta, vulnscan_meta):
-    """Generate both Markdown and JSON style reports from findings + module metadata."""
-    severity_counts = Counter([f["severity"] for f in findings])
+def count_lines(filename):
+    if not os.path.exists(filename):
+        return 0
+    with open(filename, "r") as f:
+        return sum(1 for _ in f)
+
+def run_subdomain_enum(target, outdir):
+    outfile = os.path.join(outdir, "subdomain_enum.txt")
+    # Placeholder: integrate subfinder/amass here
+    with open(outfile, "w") as f:
+        pass
+    checksum = sha256sum(outfile)
+    count = count_lines(outfile)
+    print(f"[+] Subdomain_enum saved to {outfile}")
+    print(f"[+] SHA256 checksum: {checksum}")
+    print(f"[+] Total subdomains discovered: {count}")
+    return {"output_file": outfile, "checksum": checksum, "count": count}
+
+def run_portscan(target, outdir):
+    outfile = os.path.join(outdir, "portscan.txt")
+    # Run a simple nmap scan (top 1000 ports, no ping)
+    with open(outfile, "w") as f:
+        subprocess.run(["nmap", "-Pn", "--top-ports", "1000", target], stdout=f)
+    checksum = sha256sum(outfile)
+    count = count_lines(outfile)
+    print(f"[+] Portscan saved to {outfile}")
+    print(f"[+] SHA256 checksum: {checksum}")
+    print(f"[+] Total ports discovered: {count}")
+    return {"output_file": outfile, "checksum": checksum, "count": count}
+
+def run_vulnscan(target, outdir):
+    outfile = os.path.join(outdir, "vulnscan.txt")
+    # Run nmap with vuln scripts
+    with open(outfile, "w") as f:
+        subprocess.run(["nmap", "-Pn", "--script", "vuln", target], stdout=f)
+    checksum = sha256sum(outfile)
+    count = count_lines(outfile)
+    print(f"[+] Vulnscan saved to {outfile}")
+    print(f"[+] SHA256 checksum: {checksum}")
+    print(f"[+] Total vulnerabilities discovered: {count}")
+    return {"output_file": outfile, "checksum": checksum, "count": count}
+
+def build_report(target, results, outdir):
+    # Map vulnscan findings as Medium, portscan findings as Low
+    severity_counts = {
+        "Critical": 0,
+        "High": 0,
+        "Medium": results["vulnscan"]["count"],
+        "Low": results["portscan"]["count"]
+    }
+    total_findings = sum(severity_counts.values())
+
     weighted_score = (
-        severity_counts["Critical"] * 100
-        + severity_counts["High"] * 75
-        + severity_counts["Medium"] * 50
-        + severity_counts["Low"] * 25
-    ) // max(len(findings), 1)
+        severity_counts["Critical"] * 100 +
+        severity_counts["High"] * 75 +
+        severity_counts["Medium"] * 50 +
+        severity_counts["Low"] * 10
+    )
 
-    summary = (
-        f"**Executive Summary:** Identified {len(findings)} findings "
-        f"(🛑 Critical: {severity_counts.get('Critical',0)}, "
-        f"🔴 High: {severity_counts.get('High',0)}, "
-        f"🟠 Medium: {severity_counts.get('Medium',0)}, "
-        f"🟢 Low: {severity_counts.get('Low',0)}). "
+    executive_summary = (
+        f"**Executive Summary:** Identified {total_findings} findings "
+        f"(🛑 Critical: {severity_counts['Critical']}, "
+        f"🔴 High: {severity_counts['High']}, "
+        f"🟠 Medium: {severity_counts['Medium']}, "
+        f"🟢 Low: {severity_counts['Low']}). "
         f"Weighted score {weighted_score} → "
-        f"{'🛑 Critical Risk' if weighted_score>=75 else '⚠️ Medium Risk' if weighted_score>=25 else '🟢 Low Risk'}. "
-        "Results are reproducible and documented for independent verification."
+        f"{'🛑 Critical Risk' if weighted_score >= 70 else '⚠️ Moderate/Low Risk'}. "
+        f"Results are reproducible and documented for independent verification."
     )
 
-    # Markdown report
-    md_report = (
-        f"# Scan Report\n\n---\n{summary}\n---\n\n"
-        f"### Recon Artifacts\n"
-        f"- Subdomains file: `{subenum_meta['output_file']}`\n"
-        f"- SHA256 checksum: `{subenum_meta['checksum']}`\n"
-        f"- Count: {subenum_meta['count']}\n\n"
-        f"### Portscan Artifacts\n"
-        f"- Ports file: `{portscan_meta['output_file']}`\n"
-        f"- SHA256 checksum: `{portscan_meta['checksum']}`\n"
-        f"- Count: {portscan_meta['count']}\n\n"
-        f"### Vulnerability Artifacts\n"
-        f"- Vulns file: `{vulnscan_meta['output_file']}`\n"
-        f"- SHA256 checksum: `{vulnscan_meta['checksum']}`\n"
-        f"- Count: {vulnscan_meta['count']}\n"
-    )
-
-    # JSON report
-    json_report = OrderedDict({
-        "executive_summary": summary,
+    report = {
+        "executive_summary": executive_summary,
         "severity_counts": severity_counts,
         "weighted_score": weighted_score,
-        "subenum": subenum_meta,
-        "portscan": portscan_meta,
-        "vulnscan": vulnscan_meta,
-    })
+        "subenum": results["subdomain_enum"],
+        "portscan": results["portscan"],
+        "vulnscan": results["vulnscan"]
+    }
 
-    return md_report, json_report
+    # Write JSON
+    json_path = os.path.join(outdir, "report.json")
+    with open(json_path, "w") as f:
+        json.dump(report, f, indent=2)
 
+    # Write Markdown
+    md_path = os.path.join(outdir, "report.md")
+    with open(md_path, "w") as f:
+        f.write("# Scan Report\n\n---\n")
+        f.write(executive_summary + "\n---\n\n")
+        f.write("### Recon Artifacts\n")
+        f.write(f"- Subdomains file: `{results['subdomain_enum']['output_file']}`\n")
+        f.write(f"- SHA256 checksum: `{results['subdomain_enum']['checksum']}`\n")
+        f.write(f"- Count: {results['subdomain_enum']['count']}\n\n")
+        f.write("### Portscan Artifacts\n")
+        f.write(f"- Ports file: `{results['portscan']['output_file']}`\n")
+        f.write(f"- SHA256 checksum: `{results['portscan']['checksum']}`\n")
+        f.write(f"- Count: {results['portscan']['count']}\n\n")
+        f.write("### Vulnerability Artifacts\n")
+        f.write(f"- Vulns file: `{results['vulnscan']['output_file']}`\n")
+        f.write(f"- SHA256 checksum: `{results['vulnscan']['checksum']}`\n")
+        f.write(f"- Count: {results['vulnscan']['count']}\n")
+
+    print(f"[+] Reports written to {md_path} and {json_path}")
+
+def main():
+    parser = argparse.ArgumentParser(description="ShadowOps-Lab Harness")
+    parser.add_argument("--target", required=True, help="Target domain or IP")
+    parser.add_argument("--module", choices=["subdomain_enum", "portscan", "vulnscan"], help="Run a specific module")
+    args = parser.parse_args()
+
+    timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    outdir = os.path.join("outputs", args.target, timestamp)
+    os.makedirs(outdir, exist_ok=True)
+
+    results = {}
+
+    if args.module == "subdomain_enum":
+        results["subdomain_enum"] = run_subdomain_enum(args.target, outdir)
+    elif args.module == "portscan":
+        results["portscan"] = run_portscan(args.target, outdir)
+    elif args.module == "vulnscan":
+        results["vulnscan"] = run_vulnscan(args.target, outdir)
+    else:
+        results["subdomain_enum"] = run_subdomain_enum(args.target, outdir)
+        results["portscan"] = run_portscan(args.target, outdir)
+        results["vulnscan"] = run_vulnscan(args.target, outdir)
+
+    # Ensure all keys exist for report
+    for key in ["subdomain_enum", "portscan", "vulnscan"]:
+        if key not in results:
+            results[key] = {"output_file": "", "checksum": "", "count": 0}
+
+    build_report(args.target, results, outdir)
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python3 harness.py <target>")
-        sys.exit(1)
-
-    target = sys.argv[1]
-
-    # === Run deterministic subdomain enumeration ===
-    output_file, checksum = subenum.run_subenum(target)
-    with open(output_file, "r") as f:
-        subdomains = [line.strip() for line in f if line.strip()]
-
-    subenum_meta = {
-        "output_file": output_file,
-        "checksum": checksum,
-        "count": len(subdomains),
-    }
-
-    print(f"[+] Subdomains saved to {output_file}")
-    print(f"[+] SHA256 checksum: {checksum}")
-    print(f"[+] Total subdomains discovered: {len(subdomains)}")
-
-    # === Run portscan ===
-    ports_file, ports_checksum, ports_count = portscan.run_portscan(target)
-
-    portscan_meta = {
-        "output_file": ports_file,
-        "checksum": ports_checksum,
-        "count": ports_count,
-    }
-
-    print(f"[+] Ports saved to {ports_file}")
-    print(f"[+] SHA256 checksum: {ports_checksum}")
-    print(f"[+] Total open ports discovered: {ports_count}")
-
-    # === Run vulnscan ===
-    vulns_file, vulns_checksum, vulns_count = vulnscan.run_vulnscan(target)
-
-    vulnscan_meta = {
-        "output_file": vulns_file,
-        "checksum": vulns_checksum,
-        "count": vulns_count,
-    }
-
-    print(f"[+] Vulns saved to {vulns_file}")
-    print(f"[+] SHA256 checksum: {vulns_checksum}")
-    print(f"[+] Total vulnerabilities discovered: {vulns_count}")
-
-    # === Example findings (placeholder until modules feed real data) ===
-    findings = [
-        {"id": 1, "severity": "Critical"},
-        {"id": 2, "severity": "High"},
-        {"id": 3, "severity": "High"},
-        {"id": 4, "severity": "Medium"},
-    ]
-
-    # Generate reports
-    md_report, json_report = generate_report(findings, subenum_meta, portscan_meta, vulnscan_meta)
-
-    # Print previews
-    print("\nMarkdown preview:\n", md_report)
-    print("\nJSON preview:\n", json_report)
-
-    # Save reports to files
-    with open("report.md", "w") as f:
-        f.write(md_report)
-    with open("report.json", "w") as f:
-        json.dump(json_report, f, indent=2, default=str)
-
-    print("\n[+] Reports written to report.md and report.json")
+    main()
