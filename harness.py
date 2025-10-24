@@ -1,102 +1,139 @@
-from collections import Counter, OrderedDict
+#!/usr/bin/env python3
+"""
+ShadowOps-Lab Harness
+Audit‑grade, reproducible workflow for penetration testing and SOC analysis.
+Modules:
+- probes/subenum.py
+- probes/portscan.py
+- probes/vulnscan.py
+"""
+
+import sys
 import json
-
-# === Executive Summary Helpers ===
-
-def classify_risk_profile(weighted_score):
-    if weighted_score >= 75:
-        return "🚨 High Risk"
-    elif weighted_score >= 40:
-        return "⚠️ Medium Risk"
-    else:
-        return "✅ Low Risk"
+from collections import Counter, OrderedDict
+from probes import subenum
+from probes import portscan
+from probes import vulnscan
 
 
-def format_severity_distribution(severity_counts):
-    # Add icons for clarity
-    mapping = {
-        "Critical": "🛑 Critical",
-        "High": "🔴 High",
-        "Medium": "🟠 Medium",
-        "Low": "🟢 Low"
-    }
-    ordered = ["Critical", "High", "Medium", "Low"]
-    parts = []
-    for sev in ordered:
-        count = severity_counts.get(sev, 0)
-        if count > 0:
-            parts.append(f"{mapping[sev]}: {count}")
-    return ", ".join(parts) if parts else "No findings"
+def generate_report(findings, subenum_meta, portscan_meta, vulnscan_meta):
+    """Generate both Markdown and JSON style reports from findings + module metadata."""
+    severity_counts = Counter([f["severity"] for f in findings])
+    weighted_score = (
+        severity_counts["Critical"] * 100
+        + severity_counts["High"] * 75
+        + severity_counts["Medium"] * 50
+        + severity_counts["Low"] * 25
+    ) // max(len(findings), 1)
 
-
-def generate_executive_summary(severity_counts, weighted_score):
-    total = sum(severity_counts.values())
-    profile = classify_risk_profile(weighted_score)
-    distribution = format_severity_distribution(severity_counts)
-
-    if total == 0:
-        return (
-            "**Executive Summary:** No findings detected. "
-            f"Weighted score {weighted_score} → {profile}. "
-            "Methodology is fully automated and reproducible, ensuring reviewer-grade clarity."
-        )
-
-    return (
-        f"**Executive Summary:** Identified {total} findings "
-        f"({distribution}). Weighted score {weighted_score} → {profile}. "
+    summary = (
+        f"**Executive Summary:** Identified {len(findings)} findings "
+        f"(🛑 Critical: {severity_counts.get('Critical',0)}, "
+        f"🔴 High: {severity_counts.get('High',0)}, "
+        f"🟠 Medium: {severity_counts.get('Medium',0)}, "
+        f"🟢 Low: {severity_counts.get('Low',0)}). "
+        f"Weighted score {weighted_score} → "
+        f"{'🛑 Critical Risk' if weighted_score>=75 else '⚠️ Medium Risk' if weighted_score>=25 else '🟢 Low Risk'}. "
         "Results are reproducible and documented for independent verification."
     )
 
+    # Markdown report
+    md_report = (
+        f"# Scan Report\n\n---\n{summary}\n---\n\n"
+        f"### Recon Artifacts\n"
+        f"- Subdomains file: `{subenum_meta['output_file']}`\n"
+        f"- SHA256 checksum: `{subenum_meta['checksum']}`\n"
+        f"- Count: {subenum_meta['count']}\n\n"
+        f"### Portscan Artifacts\n"
+        f"- Ports file: `{portscan_meta['output_file']}`\n"
+        f"- SHA256 checksum: `{portscan_meta['checksum']}`\n"
+        f"- Count: {portscan_meta['count']}\n\n"
+        f"### Vulnerability Artifacts\n"
+        f"- Vulns file: `{vulnscan_meta['output_file']}`\n"
+        f"- SHA256 checksum: `{vulnscan_meta['checksum']}`\n"
+        f"- Count: {vulnscan_meta['count']}\n"
+    )
 
-# === Example harness data (replace with your real scan results) ===
-findings = [
-    {"id": 1, "severity": "Critical"},
-    {"id": 2, "severity": "High"},
-    {"id": 3, "severity": "High"},
-    {"id": 4, "severity": "Medium"}
-]
+    # JSON report
+    json_report = OrderedDict({
+        "executive_summary": summary,
+        "severity_counts": severity_counts,
+        "weighted_score": weighted_score,
+        "subenum": subenum_meta,
+        "portscan": portscan_meta,
+        "vulnscan": vulnscan_meta,
+    })
 
-# Build severity_counts from findings
-severity_counts = Counter(f["severity"] for f in findings)
+    return md_report, json_report
 
-# Compute weighted_score (adjust weights to your scoring model)
-weighted_score = (
-    severity_counts.get("Critical", 0) * 25 +
-    severity_counts.get("High", 0) * 10 +
-    severity_counts.get("Medium", 0) * 5 +
-    severity_counts.get("Low", 0) * 1
-)
 
-# Markdown and JSON placeholders
-markdown_lines = ["# Scan Report\n"]
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python3 harness.py <target>")
+        sys.exit(1)
 
-# === Executive Summary Integration ===
-executive_summary = generate_executive_summary(severity_counts, weighted_score)
+    target = sys.argv[1]
 
-# Console output
-print("\n" + executive_summary + "\n")
+    # === Run deterministic subdomain enumeration ===
+    output_file, checksum = subenum.run_subenum(target)
+    with open(output_file, "r") as f:
+        subdomains = [line.strip() for line in f if line.strip()]
 
-# Markdown output (insert just below the header line, wrapped with ---)
-if isinstance(markdown_lines, list):
-    insert_index = 1 if len(markdown_lines) > 0 else 0
-    markdown_lines.insert(insert_index, "---\n" + executive_summary + "\n---\n")
-else:
-    markdown_lines = ["---\n" + executive_summary + "\n---\n"]
+    subenum_meta = {
+        "output_file": output_file,
+        "checksum": checksum,
+        "count": len(subdomains),
+    }
 
-# JSON output with executive_summary first
-report_json = OrderedDict()
-report_json["executive_summary"] = executive_summary
-report_json["severity_counts"] = severity_counts
-report_json["weighted_score"] = weighted_score
-# === End Executive Summary Integration ===
+    print(f"[+] Subdomains saved to {output_file}")
+    print(f"[+] SHA256 checksum: {checksum}")
+    print(f"[+] Total subdomains discovered: {len(subdomains)}")
 
-# === Save artifacts ===
-with open("report.md", "w") as f:
-    f.write("\n".join(markdown_lines))
+    # === Run portscan ===
+    ports_file, ports_checksum, ports_count = portscan.run_portscan(target)
 
-with open("report.json", "w") as f:
-    json.dump(report_json, f, indent=2)
+    portscan_meta = {
+        "output_file": ports_file,
+        "checksum": ports_checksum,
+        "count": ports_count,
+    }
 
-# For testing: print Markdown and JSON previews
-print("Markdown preview:\n", "\n".join(markdown_lines))
-print("\nJSON preview:\n", report_json)
+    print(f"[+] Ports saved to {ports_file}")
+    print(f"[+] SHA256 checksum: {ports_checksum}")
+    print(f"[+] Total open ports discovered: {ports_count}")
+
+    # === Run vulnscan ===
+    vulns_file, vulns_checksum, vulns_count = vulnscan.run_vulnscan(target)
+
+    vulnscan_meta = {
+        "output_file": vulns_file,
+        "checksum": vulns_checksum,
+        "count": vulns_count,
+    }
+
+    print(f"[+] Vulns saved to {vulns_file}")
+    print(f"[+] SHA256 checksum: {vulns_checksum}")
+    print(f"[+] Total vulnerabilities discovered: {vulns_count}")
+
+    # === Example findings (placeholder until modules feed real data) ===
+    findings = [
+        {"id": 1, "severity": "Critical"},
+        {"id": 2, "severity": "High"},
+        {"id": 3, "severity": "High"},
+        {"id": 4, "severity": "Medium"},
+    ]
+
+    # Generate reports
+    md_report, json_report = generate_report(findings, subenum_meta, portscan_meta, vulnscan_meta)
+
+    # Print previews
+    print("\nMarkdown preview:\n", md_report)
+    print("\nJSON preview:\n", json_report)
+
+    # Save reports to files
+    with open("report.md", "w") as f:
+        f.write(md_report)
+    with open("report.json", "w") as f:
+        json.dump(json_report, f, indent=2, default=str)
+
+    print("\n[+] Reports written to report.md and report.json")
