@@ -85,14 +85,23 @@ Additional probes scaffolded for integration:
 
 ## 🗂️ Repository structure
 
+ShadowOps-Lab/ ├── probes/ │   ├── subenum.py │   ├── portscan.py │   └── vulnscan.py 
+├── outputs/<target>/<timestamp>/ ├── logs/<target>/ ├── harness.py └── README.md
 
 ---
 
+### ✅ Correct pattern
+
+```markdown
 ## ⚡ Usage
 Run the harness from the project root:
 
 ```bash
-python3 harness.py <target>
+python3 harness.py <target> 
+
+---
+
+
 
 📊 Sample Run
 
@@ -105,19 +114,18 @@ $ python3 harness.py example.com
 
 📝 Sample Report (Markdown)
 Scan Report
-
 Executive Summary: Identified 4 findings (🛑 Critical: 1, 🔴 High: 2, 🟠 Medium: 1, 🟢 Low: 0). Weighted score 75 → 🛑 Critical Risk.
 Recon Artifacts
-• 	Subdomains file: 
-• 	SHA256 checksum: 
+• 	Subdomains file:
+• 	SHA256 checksum:
 • 	Count: 10
 Portscan Artifacts
-• 	Ports file: 
-• 	SHA256 checksum: 
+• 	Ports file:
+• 	SHA256 checksum:
 • 	Count: 3
 Vulnerability Artifacts
-• 	Vulns file: 
-• 	SHA256 checksum: 
+• 	Vulns file:
+• 	SHA256 checksum:
 • 	Count: 0
 
 🔒 Reproducibility
@@ -135,9 +143,3 @@ Vulnerability Artifacts
 • 	[ ] Supply chain simulator
 • 	[ ] IoT exploit capsule
 
----
-
-✅ This is now the **final, complete, and corrected README.md**.  
-You can paste it directly into your repo, commit, and push.  
-
-Would you like me to also prepare a **short LinkedIn announcement draft** you can post with a screenshot of this README to showcase your Phase 2 milestone?
