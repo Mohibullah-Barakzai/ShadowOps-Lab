@@ -1,9 +1,24 @@
 {
-  "executive_summary": "**Executive Summary:** Identified 4 findings (\ud83d\uded1 Critical: 1, \ud83d\udd34 High: 2, \ud83d\udfe0 Medium: 1). Weighted score 50 \u2192 \u26a0\ufe0f Medium Risk. Results are reproducible and documented for independent verification.",
+  "executive_summary": "**Executive Summary:** Identified 4 findings (\ud83d\uded1 Critical: 1, \ud83d\udd34 High: 2, \ud83d\udfe0 Medium: 1, \ud83d\udfe2 Low: 0). Weighted score 75 \u2192 \ud83d\uded1 Critical Risk. Results are reproducible and documented for independent verification.",
   "severity_counts": {
     "Critical": 1,
     "High": 2,
     "Medium": 1
   },
-  "weighted_score": 50
+  "weighted_score": 75,
+  "subenum": {
+    "output_file": "outputs/example.com/2025-10-24T19:07:29Z/subdomains.txt",
+    "checksum": "4343526850db6c244ceb0c3c1353ae7ec8b4bf0542a2cbfe5d1483ebbedfe0b3",
+    "count": 10
+  },
+  "portscan": {
+    "output_file": "outputs/example.com/2025-10-24T19:07:30Z/ports.txt",
+    "checksum": "458619dd3eda2997e7453811fa5342bae55d2d57c48ca25cac336e452f90a14b",
+    "count": 3
+  },
+  "vulnscan": {
+    "output_file": "outputs/example.com/2025-10-24T19:07:45Z/vulns.txt",
+    "checksum": "4fce84265af7c4ecd25dcac1b414fd3f0c306467d5d1d55c32725bb1803a45ad",
+    "count": 0
+  }
 }
