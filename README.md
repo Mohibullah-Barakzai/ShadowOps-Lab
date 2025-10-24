@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 > ShadowOps Lab is a reproducible, next‑gen security framework that trains you to **attack like a pentester and defend like a SOC analyst** — all in one lab.  
-> ⚠️ **Note:** This project is under active development. Phase 1 MVP is being built — expect rapid changes.
+> ⚠️ **Note:** This project is under active development. Phase 2 milestone (Recon + Portscan + Vulnscan) is complete — expect rapid iteration.
 
 ---
 
@@ -29,47 +29,55 @@ This dual approach ensures:
 - **Recon & Exploit Harness** → automated recon + one exploit module (AI‑mutated web fuzzing).  
 - **SOC Replay Capsule** → logs + replay timeline + Sigma/YARA rules.  
 - **Executive Summary Generator** → severity distribution + one‑line risk profile.  
-- **README.md** → polished storytelling:  
-  *“ShadowOps simulates tomorrow’s threats in a reproducible way.”*  
+- **README.md** → polished storytelling + reproducibility showcase.  
 
 👉 This is enough to land interviews as a SOC Analyst or Junior Pentester.  
 
 ---
 
 ## 🚀 Phase 2 – Expansion (1–2 Months)
-
-Phase 2 expands ShadowOps Lab into new offensive and defensive domains while preserving the reproducibility and audit‑friendly rigor established in Phase 1. Each capability is paired with replay capsules and cross‑platform validation to ensure clarity and artifact integrity.
+Phase 2 expands ShadowOps Lab into new offensive and defensive domains while preserving the reproducibility and audit‑friendly rigor established in Phase 1.  
 
 ### Key Objectives
 - **Supply Chain Attack Simulator**  
-  Simulate malicious dependency injection in CI/CD pipelines to test detection and response.
-
 - **IoT Exploit Capsule**  
-  Emulate vulnerable smart devices (e.g., healthcare sensors, home IoT) for exploit replay and SOC validation.
-
 - **AI‑Adversarial Payload Generator**  
-  Generate AI‑mutated payloads designed to bypass WAF/IDS, validating resilience against adversarial inputs.
-
 - **Cross‑Platform Proof**  
-  Demonstrate reproducibility across Linux, macOS, and Windows environments, ensuring consistent artifacts and reviewer clarity.
 
-✅ *By the end of Phase 2, the harness will demonstrate scalability across multiple domains while maintaining symmetry between probes and replay capsules.*
+✅ *By the end of Phase 2, the harness demonstrates scalability across multiple domains while maintaining symmetry between probes and replay capsules.*  
 
 ---
 
 ## 🌍 Phase 3 (Global Shine – 3–6 Months)
-- **Post‑Quantum Crypto Audit Module** → flag weak algorithms, suggest PQC replacements.  
-- **Self‑Evolving Red/Blue AI Loop** → AI red team generates payloads, AI blue team trains detection rules.  
-- **Professional Docs + Demo Video** → publish on GitHub, LinkedIn, Medium.  
-- **Branding** → position it as *“The Open‑Source Next‑Gen Pentest & SOC Training Framework.”*  
+- **Post‑Quantum Crypto Audit Module**  
+- **Self‑Evolving Red/Blue AI Loop**  
+- **Professional Docs + Demo Video**  
+- **Branding** → *“The Open‑Source Next‑Gen Pentest & SOC Training Framework.”*  
 
 ---
 
 ## 📌 Executive Summary
 ShadowOps Lab is more than a project — it’s a reproducible, next‑gen security framework that proves mastery across offensive and defensive domains.  
 It demonstrates immediate job‑readiness (Phase 1), clear growth potential (Phase 2), and long‑term vision (Phase 3).  
-For recruiters and reviewers, it signals a candidate who can **attack, defend, and innovate** — all with reproducibility and clarity.
+For recruiters and reviewers, it signals a candidate who can **attack, defend, and innovate** — all with reproducibility and clarity.  
 
 ---
 
-## 📂 Repo Skeleton
+## 📦 Current Modules
+- `probes/subenum.py` → Deterministic subdomain enumeration (via `assetfinder` or fallback list).  
+- `probes/portscan.py` → Deterministic port scanning with checksums and logs.  
+- `probes/vulnscan.py` → Deterministic vulnerability scanning (via `nmap --script vuln` or fallback).  
+
+Additional probes scaffolded for integration:  
+- `ai_adversarial_probe/`  
+- `insider_threat_probe/`  
+- `iot_probe/`  
+- `supply_chain_probe/`  
+
+---
+
+## ⚡ Usage
+Run the harness from the project root:
+
+```bash
+python3 harness.py <target>
