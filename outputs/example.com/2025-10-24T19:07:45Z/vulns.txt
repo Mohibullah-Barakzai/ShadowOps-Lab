@@ -1,0 +1,18 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-24 15:07 EDT
+Nmap scan report for example.com (23.215.0.136)
+Host is up (0.14s latency).
+Other addresses for example.com (not scanned): 2600:1406:bc00:53::b81e:94c8 2600:1406:5e00:6::17ce:bc1b 2600:1406:bc00:53::b81e:94ce 2600:1406:5e00:6::17ce:bc12 2600:1408:ec00:36::1736:7f24 2600:1408:ec00:36::1736:7f31 23.220.75.232 23.220.75.245 23.192.228.80 23.192.228.84 23.215.0.138
+rDNS record for 23.215.0.136: a23-215-0-136.deploy.static.akamaitechnologies.com
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+21/tcp  open  ftp
+80/tcp  open  http
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+443/tcp open  https
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+
+Nmap done: 1 IP address (1 host up) scanned in 691.73 seconds
