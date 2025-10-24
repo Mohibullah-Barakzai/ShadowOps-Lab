@@ -1,5 +1,21 @@
+# Python cache & bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and outputs
 logs/
 outputs/
-outputs/
-um:
+*.log
+
+# Virtual environments (if you ever use venv)
+.venv/
+venv/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Tool-specific
 setfinder*
