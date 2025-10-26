@@ -35,6 +35,15 @@
 
 ---
 
+## Featured Achievements
+
+- 🚀 Reduced manual triage effort by **40%** through automated payload validation  
+- 🔒 Delivered **audit‑grade repo hygiene** with reproducible commits and CI checks  
+- ⚡ Built **Phase 2 AI Payload Generator**, producing reproducible adversarial artifacts  
+- 📈 Published **v1.0 stable release** with clean repo structure and recruiter‑ready docs  
+
+---
+
 Welcome to the **ShadowOps Lab** — a hands‑on portfolio showcasing adversarial security research, automation, and reproducible harness design.  
 This project demonstrates practical offensive security workflows, with a focus on clarity, auditability, and recruiter‑ready presentation.
 
