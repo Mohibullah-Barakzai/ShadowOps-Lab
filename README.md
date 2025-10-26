@@ -195,13 +195,18 @@ Vulnerability Artifacts
 ---
 
 
-🛠️ Roadmap
-• 	[x] Subdomain enumeration
-• 	[x] Port scanning
-• 	[x] Vulnerability scanning
-• 	[ ] Exploit fuzzing
-• 	[ ] SOC replay capsule
-• 	[ ] Supply chain simulator
-• 	[ ] IoT exploit capsule
+## 🛠️ Roadmap
+
+**Recon & Scanning**
+- [ ] Port scanning
+- [ ] Subdomain fuzzing
+- [ ] Recursive subdomain scanning
+
+**Replay & Reproducibility**
+- [ ] S2E PoC replay capsule
+- [ ] SOC replay capsule (deterministic incident replays)
+
+**Logging & Analysis**
+- [ ] Logging enumeration per target
 
 ---
