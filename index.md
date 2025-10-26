@@ -14,6 +14,15 @@
 [Modules](./modules/) • 
 [About](./index.md)
 
+
+---
+
+## Highlights
+
+- ✅ Reproducible adversarial harness with AI‑mutated payloads  
+- ✅ Audit‑grade repo hygiene and documentation  
+- ✅ Modular design for SOC/IoT expansion  
+
 ---
 
 Welcome to the **ShadowOps Lab** — a hands‑on portfolio showcasing adversarial security research, automation, and reproducible harness design.  
