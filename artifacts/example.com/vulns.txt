@@ -1,0 +1,4 @@
+CVE-2021-41773 | Apache HTTP Server 2.4.49 Path Traversal | Critical
+CVE-2020-1472  | Netlogon Elevation of Privilege (Zerologon) | High
+CVE-2019-0708  | Remote Desktop Services Remote Code Execution (BlueKeep) | High
+CVE-2022-22965 | Spring Framework RCE (Spring4Shell) | Medium
