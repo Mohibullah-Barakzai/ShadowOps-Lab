@@ -57,12 +57,11 @@ Phase 2 introduces the **AI‑Adversarial Payload Generator**, extending the l
 
 ---
 
-
 ## Connect
 
-- [LinkedIn](https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/)  
-- [GitHub](https://github.com/Mohibullah-Barakzai)  
-- [Email](mailto:Mohibullah.Barak3@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/)  
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/Mohibullah-Barakzai)  
+[![Email](https://img.shields.io/badge/Email-Contact-red?logo=gmail)](mailto:Mohibullah.Barak3@gmail.com)
 
 ---
 
