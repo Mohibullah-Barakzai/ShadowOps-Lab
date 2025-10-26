@@ -16,6 +16,16 @@
 
 ---
 
+## At a Glance
+
+- 📦 **Repo Size:** ~X MB  
+- 📝 **Commits:** XXX+  
+- 🔧 **Languages:** Python, Bash, PowerShell  
+- 📜 **License:** MIT  
+- 🌐 **Platform:** Kali Linux, GitHub Pages  
+
+---
+
 ## Highlights
 
 - ✅ Reproducible adversarial harness with AI‑mutated payloads  
