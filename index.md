@@ -127,13 +127,40 @@ Phase 2 introduces the **AI‑Adversarial Payload Generator**, extending the l
 
 ---
 
-## Phase Roadmap
+## 🛣️ Roadmap
 
-Phase 1 ──✔ Baseline harness, repo hygiene, v1.0 release  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  
-Phase 2 ──▶ AI‑Adversarial Payload Generator, reproducible artifacts  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  
-Phase 3 ──○ SOC Replay Capsule, IoT Capsule, advanced automation  
+### ✅ Phase 1 — Foundation
+<p>
+  <img src="https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square" />
+</p>
+
+- Baseline harness, repo hygiene, recruiter‑ready README  
+- Core modules: `subenum`, `portscan`, `vulnscan`  
+- v1.0 Stable Release (October 2025)  
+
+---
+
+### 🚀 Phase 2 — Expansion
+<p>
+  <img src="https://img.shields.io/badge/Status-In%20Progress-blue?style=flat-square" />
+</p>
+
+- **AI‑Adversarial Payload Generator** → ✅ Integrated, reproducible artifacts with SHA256 checksums  
+- Supply Chain Attack Simulator → ⏳ Planned  
+- IoT Exploit Capsule → ⏳ Planned  
+- Cross‑platform validation (macOS/Windows) → ⏳ Planned  
+
+---
+
+### 🌐 Phase 3 — Vision
+<p>
+  <img src="https://img.shields.io/badge/Status-Upcoming-lightgrey?style=flat-square" />
+</p>
+
+- Post‑Quantum Crypto Audit Module  
+- Self‑Evolving Red/Blue AI Loop  
+- Professional docs + demo video  
+- Branding push as *“The Open‑Source Next‑Gen Pentest & SOC Training Framework”*  
 
 ---
 
