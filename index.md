@@ -24,6 +24,17 @@
 
 ---
 
+## Tech Stack Overview
+
+| Category   | Tools / Platforms |
+|------------|-------------------|
+| **Languages**  | Python, Bash, PowerShell |
+| **Platforms**  | Kali Linux, GitHub Pages |
+| **Security**   | Forensics, Incident Response, Penetration Testing |
+| **Automation** | CI/CD, GitHub Actions |
+
+---
+
 Welcome to the **ShadowOps Lab** — a hands‑on portfolio showcasing adversarial security research, automation, and reproducible harness design.  
 This project demonstrates practical offensive security workflows, with a focus on clarity, auditability, and recruiter‑ready presentation.
 
@@ -56,7 +67,6 @@ Phase 2 introduces the **AI‑Adversarial Payload Generator**, extending the l
 - `index.md` → GitHub Pages landing page  
 
 ---
-
 
 ## Featured Modules
 
