@@ -52,3 +52,10 @@ Phase 2 introduces the **AI‑Adversarial Payload Generator**, extending the l
 - Expand Phase 2 with additional adversarial modules  
 - Integrate SOC Replay Capsule for incident response simulation  
 - Continue publishing reproducible artifacts and documentation
+
+
+---
+
+<p align="center">
+Maintained by <strong>Mohibullah Barakzai</strong> • © 2025 • Licensed under MIT
+</p>
