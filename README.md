@@ -35,18 +35,23 @@ This dual approach ensures:
 
 ---
 
-## 🚀 Phase 2 – Expansion (1–2 Months)
-Phase 2 expands ShadowOps Lab into new offensive and defensive domains while preserving reproducibility and audit‑friendly rigor.
+## 🚀 Phase 2 – Expansion (1–2 Months)
 
-**Key Objectives:**
-- Supply Chain Attack Simulator  
-- IoT Exploit Capsule  
-- AI‑Adversarial Payload Generator  
-- Cross‑Platform Proof  
+Phase 2 extends ShadowOps Lab into advanced offensive and defensive domains while preserving its core principles of **reproducibility, audit‑grade rigor, and modular design**.
 
-✅ By the end of Phase 2, the harness demonstrates scalability across multiple domains while maintaining symmetry between probes and replay capsules.
+### 🎯 Key Objectives
+- **Supply Chain Attack Simulator**  
+  Model dependency hijacking and package‑level threats in a controlled, reproducible environment.  
+- **IoT Exploit Capsule**  
+  Demonstrate attacks against embedded/IoT devices with replayable detection workflows.  
+- **AI‑Adversarial Payload Generator**  
+  Explore next‑generation fuzzing and AI‑mutated payloads to simulate adaptive adversaries.  
+- **Cross‑Platform Proof**  
+  Validate harness portability across Linux, macOS, and Windows environments.
 
 ---
+
+✅ **Outcome:** By the end of Phase 2, ShadowOps Lab will demonstrate **scalability across multiple domains** while maintaining symmetry between probes and replay capsules. This ensures every offensive action has a corresponding defensive replay, raising the standard for reproducible security research.
 
 ## 🌍 Phase 3 (Global Shine – 3–6 Months)
 - Post‑Quantum Crypto Audit Module  
