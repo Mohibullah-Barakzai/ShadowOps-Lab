@@ -14,6 +14,8 @@
 [Modules](./modules/) • 
 [About](./index.md)
 
+---
+
 Welcome to the **ShadowOps Lab** — a hands‑on portfolio showcasing adversarial security research, automation, and reproducible harness design.  
 This project demonstrates practical offensive security workflows, with a focus on clarity, auditability, and recruiter‑ready presentation.
 
@@ -51,8 +53,15 @@ Phase 2 introduces the **AI‑Adversarial Payload Generator**, extending the l
 
 - Expand Phase 2 with additional adversarial modules  
 - Integrate SOC Replay Capsule for incident response simulation  
-- Continue publishing reproducible artifacts and documentation
+- Continue publishing reproducible artifacts and documentation  
 
+---
+
+## Connect
+
+- [LinkedIn](https://www.linkedin.com/in/YOUR-LINKEDIN)  
+- [GitHub](https://github.com/Mohibullah-Barakzai)  
+- [Email](mailto:YOUR-EMAIL@example.com)
 
 ---
 
