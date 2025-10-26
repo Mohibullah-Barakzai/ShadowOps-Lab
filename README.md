@@ -159,32 +159,57 @@ python3 harness.py <target>
 
 
 
-📊 Sample Run
+## 📊 Sample Run
 
-$ python3 harness.py example.com
-[+] Subdomains saved to outputs/example.com/.../subdomains.txt
-[+] Ports saved to outputs/example.com/.../ports.txt
-[+] Vulns saved to outputs/example.com/.../vulns.txt
-[+] Reports written to report.md and report.json
+```bash
+python3 harness.py example.com
+[*] Subdomains saved to outputs/example.com/subdomains.txt
+[*] Ports saved to outputs/example.com/ports.txt
+[*] Vulns saved to outputs/example.com/vulns.txt
+[*] Reports written to report.md and report.json
 
 ---
 
 
-📝 Sample Report (Markdown)
-Scan Report
-Executive Summary: Identified 4 findings (🛑 Critical: 1, 🔴 High: 2, 🟠 Medium: 1, 🟢 Low: 0). Weighted score 75 → 🛑 Critical Risk.
-Recon Artifacts
-• 	Subdomains file:
-• 	SHA256 checksum:
-• 	Count: 10
-Portscan Artifacts
-• 	Ports file:
-• 	SHA256 checksum:
-• 	Count: 3
-Vulnerability Artifacts
-• 	Vulns file:
-• 	SHA256 checksum:
-• 	Count: 0
+Artifacts from this run:
+- 📄 [subdomains.txt](./artifacts/example.com/subdomains.txt)
+- 📄 [ports.txt](./artifacts/example.com/ports.txt)
+- 📄 [vulns.txt](./artifacts/example.com/vulns.txt)
+- 📄 [report.md](./artifacts/example.com/report.md)
+- 📄 [report.json](./artifacts/example.com/report.json)
+
+---
+
+## 📝 Sample Report (Markdown)
+
+**Scan Report**
+
+**Executive Summary:** Identified 4 findings (🔴 Critical: 1, 🟠 High: 2, 🟡 Medium: 1, 🟢 Low: 0).  
+**Overall Risk Score:** 8 (weighted by severity)
+
+**Port Artifacts**
+- Ports scanned: 5
+- Count: 10
+
+**Subdomain Artifacts**
+- Subdomains: 12
+
+**Service Checksums**
+- Count: 16
+
+**Vulnerability Artifacts**
+- Count: 6
+
+**Reproducibility**
+- CVE: 0
+- Vulns with timestamped PoC: 3
+- Vulns with S2E checksum: 2
+- Checksums written per target
+
+**Full Reports**
+- 📄 [Markdown Report](./artifacts/example.com/report.md)
+- 📄 [JSON Report](./artifacts/example.com/report.json)
+
 ---
 
 🔒 Reproducibility
