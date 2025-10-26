@@ -57,6 +57,18 @@ Phase 2 introduces the **AI‑Adversarial Payload Generator**, extending the l
 
 ---
 
+
+## Featured Modules
+
+| Module                  | Description                                                   | Status        |
+|--------------------------|---------------------------------------------------------------|---------------|
+| **AI Payload Generator** | Generates reproducible, AI‑mutated payloads for red‑team use  | ▶ In Progress |
+| **SOC Replay Capsule**   | Simulates incident response scenarios with replayable data    | ○ Planned     |
+| **IoT Capsule**          | Future module for adversarial testing on IoT environments    | ○ Planned     |
+| **Baseline Harness**     | Core framework, repo hygiene, and v1.0 stable release         | ✔ Complete    |
+
+---
+
 ## Next Steps
 
 - Expand Phase 2 with additional adversarial modules  
