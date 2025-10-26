@@ -9,10 +9,14 @@
 ![Powered by Python](https://img.shields.io/badge/Powered%20by-Python-3776AB?logo=python&logoColor=white)
 ![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-222222?logo=githubpages)
 
-[Repository](https://github.com/Mohibullah-Barakzai/ShadowOps-Lab) • 
-[Artifacts](./artifacts/) • 
-[Modules](./modules/) • 
-[About](./index.md)
+---
+
+## Quick Links
+
+[![Repo](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/Mohibullah-Barakzai/ShadowOps-Lab)
+[![Artifacts](https://img.shields.io/badge/Artifacts-Logs%20%26%20Outputs-blue?logo=files)](./artifacts/)
+[![Modules](https://img.shields.io/badge/Modules-Harness%20Components-green?logo=code)](./modules/)
+[![Docs](https://img.shields.io/badge/Docs-About%20Project-orange?logo=markdown)](./index.md)
 
 ---
 
