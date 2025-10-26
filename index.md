@@ -9,6 +9,11 @@
 ![Powered by Python](https://img.shields.io/badge/Powered%20by-Python-3776AB?logo=python&logoColor=white)
 ![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-222222?logo=githubpages)
 
+[Repository](https://github.com/Mohibullah-Barakzai/ShadowOps-Lab) • 
+[Artifacts](./artifacts/) • 
+[Modules](./modules/) • 
+[About](./index.md)
+
 Welcome to the **ShadowOps Lab** — a hands‑on portfolio showcasing adversarial security research, automation, and reproducible harness design.  
 This project demonstrates practical offensive security workflows, with a focus on clarity, auditability, and recruiter‑ready presentation.
 
