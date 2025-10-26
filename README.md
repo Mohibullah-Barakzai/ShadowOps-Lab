@@ -10,6 +10,8 @@
 ![Powered by Python](https://img.shields.io/badge/Powered%20by-Python-3776AB?logo=python&logoColor=white)
 ![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-222222?logo=githubpages)
 
+> ⚠️ **Note:** This project is under active development. Phase 2 milestone (Recon + Portscan + Vulnscan) is complete — expect rapid iteration.
+
 ---
 
 ## Quick Links
