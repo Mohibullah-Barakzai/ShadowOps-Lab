@@ -67,9 +67,11 @@ Phase 2 introduces the **AI‑Adversarial Payload Generator**, extending the l
 
 ## Phase Roadmap
 
-- **Phase 1 (Complete):** Baseline harness, repo hygiene, v1.0 release  
-- **Phase 2 (In Progress):** AI‑Adversarial Payload Generator, reproducible artifacts  
-- **Phase 3 (Planned):** SOC Replay Capsule, IoT Capsule, advanced automation  
+Phase 1 ──✔ Baseline harness, repo hygiene, v1.0 release  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  
+Phase 2 ──▶ AI‑Adversarial Payload Generator, reproducible artifacts  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  
+Phase 3 ──○ SOC Replay Capsule, IoT Capsule, advanced automation  
 
 ---
 
