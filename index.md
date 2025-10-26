@@ -65,6 +65,15 @@ Phase 2 introduces the **AI‑Adversarial Payload Generator**, extending the l
 
 ---
 
+## Key Artifacts
+
+- 📄 [Phase 2 Payload Logs](./artifacts/phase2-payloads.log) — reproducible AI‑mutated payload outputs  
+- 🖼️ [AI Payload Generator Screenshot](./assets/ai-payload-run.png) — proof of Phase 2 execution  
+- 📂 [SOC Replay Capsule Stub](./modules/soc-replay/) — foundation for Phase 3 expansion  
+- 📑 [README.md](./README.md) — recruiter‑ready documentation with badges and roadmap  
+
+---
+
 ## Phase Roadmap
 
 Phase 1 ──✔ Baseline harness, repo hygiene, v1.0 release  
