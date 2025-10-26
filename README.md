@@ -24,10 +24,10 @@
 
 ## Quick Links
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-GitHub%20Pages-blue?logo=githubpages)](https://mohibullah-barakzai.github.io/ShadowOps-Lab/)
-[![Artifacts](https://img.shields.io/badge/Artifacts-Logs%20%26%20Outputs-green?logo=files)](./artifacts/)
-[![Modules](https://img.shields.io/badge/Modules-Harness%20Components-orange?logo=code)](./modules/)
-[![Docs](https://img.shields.io/badge/Docs-About%20Project-lightgrey?logo=markdown)](./index.md)
+[![Repo](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/Mohibullah-Barakzai/ShadowOps-Lab)
+[![Artifacts](https://img.shields.io/badge/Artifacts-Logs%20%26%20Outputs-blue?logo=files)](./artifacts/)
+[![Modules](https://img.shields.io/badge/Modules-Harness%20Components-green?logo=code)](./modules/)
+[![Docs](https://img.shields.io/badge/Docs-About%20Project-orange?logo=markdown)](./index.md)
 
 ---
 
@@ -37,21 +37,27 @@
 ![Commits](https://img.shields.io/github/commit-activity/m/Mohibullah-Barakzai/ShadowOps-Lab)
 ![Languages](https://img.shields.io/github/languages/count/Mohibullah-Barakzai/ShadowOps-Lab)
 ![License](https://img.shields.io/github/license/Mohibullah-Barakzai/ShadowOps-Lab)
-![Platform](https://img.shields.io/badge/Platform-Kali%20Linux%20%7C%20macOS%20%7C%20Windows-blue)
+![Platform](https://img.shields.io/badge/Platform-Kali%20Linux%20%7C%20GitHub%20Pages-blue)
 
 ---
 
-## 🎯 Core Idea
-ShadowOps Lab is a **multi‑purpose framework** that bridges offensive and defensive security:
 
-- **Attack like a pentester** → Recon, fuzzing, exploit modules  
-- **Defend like a SOC analyst** → Forensic replay capsule with logs, detection rules, timelines  
-- **Expand into next‑gen domains** → AI payloads, supply chain, IoT, post‑quantum crypto  
+## Highlights
 
-This dual approach ensures:  
-- Recruiters see you can attack *and* defend  
-- SOC leaders see you understand real‑world detection  
-- Pentest managers see you’re already thinking about 2026 threats  
+- ✅ Reproducible adversarial harness with AI‑mutated payloads  
+- ✅ Audit‑grade repo hygiene and documentation  
+- ✅ Modular design for SOC/IoT expansion  
+
+---
+
+## Tech Stack Overview
+
+| Category     | Tools / Platforms |
+|--------------|-------------------|
+| **Languages**  | Python, Bash, PowerShell |
+| **Platforms**  | Kali Linux, GitHub Pages |
+| **Security**   | Forensics, Incident Response, Penetration Testing |
+| **Automation** | CI/CD, GitHub Actions | 
 
 ---
 
