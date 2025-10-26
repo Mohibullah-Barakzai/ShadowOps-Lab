@@ -18,11 +18,11 @@
 
 ## At a Glance
 
-- 📦 **Repo Size:** ~X MB  
-- 📝 **Commits:** XXX+  
-- 🔧 **Languages:** Python, Bash, PowerShell  
-- 📜 **License:** MIT  
-- 🌐 **Platform:** Kali Linux, GitHub Pages  
+![Repo Size](https://img.shields.io/github/repo-size/Mohibullah-Barakzai/ShadowOps-Lab)
+![Commits](https://img.shields.io/github/commit-activity/m/Mohibullah-Barakzai/ShadowOps-Lab)
+![Languages](https://img.shields.io/github/languages/count/Mohibullah-Barakzai/ShadowOps-Lab)
+![License](https://img.shields.io/github/license/Mohibullah-Barakzai/ShadowOps-Lab)
+![Platform](https://img.shields.io/badge/Platform-Kali%20Linux%20%7C%20GitHub%20Pages-blue)
 
 ---
 
