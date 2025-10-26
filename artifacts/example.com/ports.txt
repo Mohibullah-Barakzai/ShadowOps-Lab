@@ -1,0 +1,4 @@
+80/tcp   open  http        Apache httpd 2.4.49
+443/tcp  open  https       nginx 1.18.0
+22/tcp   open  ssh         OpenSSH 8.2p1 Ubuntu
+3306/tcp open  mysql       MySQL 5.7.34
