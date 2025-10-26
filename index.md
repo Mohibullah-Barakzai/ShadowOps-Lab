@@ -1,5 +1,9 @@
 # ShadowOps Lab
 
+![GitHub last commit](https://img.shields.io/github/last-commit/Mohibullah-Barakzai/ShadowOps-Lab)
+![GitHub repo size](https://img.shields.io/github/repo-size/Mohibullah-Barakzai/ShadowOps-Lab)
+![GitHub license](https://img.shields.io/github/license/Mohibullah-Barakzai/ShadowOps-Lab)
+
 Welcome to the **ShadowOps Lab** — a hands‑on portfolio showcasing adversarial security research, automation, and reproducible harness design.  
 This project demonstrates practical offensive security workflows, with a focus on clarity, auditability, and recruiter‑ready presentation.
 
