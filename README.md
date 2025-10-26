@@ -102,6 +102,7 @@ For recruiters and reviewers, it signals a candidate who can attack, defend, and
 - `probes/subenum.py` → Deterministic subdomain enumeration  
 - `probes/portscan.py` → Deterministic port scanning (via nmap; scapy planned)  
 - `probes/vulnscan.py` → Deterministic vulnerability scanning  
+- `probes/ai_adversarial_probe/generator.py` → Generates mutated adversarial payloads with reproducible SHA256 checksums (Phase 2 module) 
 
 **Additional probes scaffolded for integration:**  
 - `ai_adversarial_probe/`  
