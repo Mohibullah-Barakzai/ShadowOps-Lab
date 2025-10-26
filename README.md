@@ -180,6 +180,14 @@ Artifacts from this run:
 
 ---
 
+**Visual Proof**
+
+![Sample Run Screenshot](./artifacts/example.com/sample_run.png)
+
+---
+
+
+
 ## 📝 Sample Report (Markdown)
 
 **Scan Report**
