@@ -1,6 +1,8 @@
 # ShadowOps Lab  
 **Attack like a pentester, defend like a SOC analyst — all in one reproducible lab.**
 
+> 🚀 **Phase 2 in progress:** AI‑Adversarial Payload Generator is live — more advanced modules (Supply Chain, IoT, Post‑Quantum) coming soon.
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/Mohibullah-Barakzai/ShadowOps-Lab)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Mohibullah-Barakzai/ShadowOps-Lab)
 ![GitHub license](https://img.shields.io/github/license/Mohibullah-Barakzai/ShadowOps-Lab)
