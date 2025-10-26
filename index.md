@@ -6,6 +6,8 @@
   <img src="https://img.shields.io/badge/Phase%203-Upcoming-lightgrey?style=for-the-badge" />
 </p>
 
+> 🚀 **Phase 2 in progress:** AI‑Adversarial Payload Generator is live — more advanced modules (Supply Chain, IoT, Post‑Quantum) coming soon.
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/Mohibullah-Barakzai/ShadowOps-Lab)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Mohibullah-Barakzai/ShadowOps-Lab)
 ![GitHub license](https://img.shields.io/github/license/Mohibullah-Barakzai/ShadowOps-Lab)
