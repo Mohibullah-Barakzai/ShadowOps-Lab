@@ -133,8 +133,11 @@ ShadowOps-Lab/
 ├── harness.py
 └── README.md
 
+---
 
 ## ⚡ Usage
+*One‑line command to launch a full recon → scan → report pipeline.*
+
 Run the harness from the project root:
 
 ```bash
