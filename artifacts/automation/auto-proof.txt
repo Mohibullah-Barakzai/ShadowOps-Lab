@@ -1,0 +1,2 @@
+[Automation Proof v0.1]
+Demonstrates scripted validation of recon artifacts.
