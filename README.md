@@ -1,4 +1,5 @@
 # ShadowOps Lab  
+[![Verify Checksums](https://github.com/Mohibullah-Barakzai/ShadowOps-Lab/actions/workflows/checksums.yml/badge.svg)](https://github.com/Mohibullah-Barakzai/ShadowOps-Lab/actions/workflows/checksums.yml)
 **Attack like a pentester, defend like a SOC analyst — all in one reproducible lab.**
 
 > 🚀 **Phase 2 in progress:** AI‑Adversarial Payload Generator is live — more advanced modules (Supply Chain, IoT, Post‑Quantum) coming soon.
