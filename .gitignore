@@ -9,3 +9,5 @@ __pycache__/
 # Ignore scratch/test artifacts but keep curated proofs
 artifacts/20*/              # ignore timestamped run folders (e.g., 20251026_…)
 artifacts/recon-sample.md   # ignore sample file
+artifacts/20*/
+artifacts/recon-sample.md
