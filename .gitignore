@@ -1,21 +1,5 @@
-# Python cache & bytecode
+*.bak
+artifacts/
+modules/ai-payloads/artifacts/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-
-# Logs and outputs
-logs/
-outputs/
-*.log
-
-# Virtual environments (if you ever use venv)
-.venv/
-venv/
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Tool-specific
-setfinder*
