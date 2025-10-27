@@ -1,0 +1,3 @@
+[SOC Replay Capsule v0.1]
+Redacted replay of incident triage session.
+Demonstrates log parsing, alert correlation, and analyst workflow.
