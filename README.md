@@ -317,12 +317,12 @@ Phase 3 extends ShadowOps‑Lab into advanced offensive and defensive domains 
 
 ### 📌 Phase 4 — Advanced Modules & Recruiter Amplification
 - ![in progress](https://img.shields.io/badge/status-in%20progress-blue)
-- **Adversarial Payload Generator** — scaffold proof locked ([artifacts/phase4/adversarial-payload-proof.txt](...))
-- **SOC Automation Enhancer** — scripted triage and alert correlation routines...
-- **Recruiter Case Study Artifact** — concise, recruiter‑friendly walkthrough...
-- **Cross‑Domain Security Tie‑In (Optional)** — applying the harness methodology... 
+- **Adversarial Payload Generator** — script producing multiple payload variants (plain, Base64, hex, ROT13) with baseline‑locked output ([artifacts/phase4/payload-gen-output.txt](artifacts/phase4/payload-gen-output.txt))
+- **SOC Automation Enhancer** — scripted triage and alert correlation routines with reproducible baseline outputs
+- **Recruiter Case Study Artifact** — concise, recruiter‑friendly walkthrough demonstrating adversarial simulation and SOC response
+- **Cross‑Domain Security Tie‑In (Optional)** — applying the harness methodology to adjacent domains for extended impact
 
-✅ **Outcome:** ShadowOps‑Lab evolves into a **living, audit‑grade portfolio** that demonstrates forward‑looking adversarial capabilities, SOC automation, and recruiter‑relevant case studies — bridging technical mastery with business clarity.
+✅ **Outcome:** ShadowOps‑Lab evolves into a **living, audit‑grade portfolio** that demonstrates forward‑looking adversarial capabilities, SOC automation, and recruiter‑relevant case studies — bridging technical mastery with business impact.
 
 ---
 
