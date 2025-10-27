@@ -160,7 +160,8 @@ ShadowOps-Lab/
 Run the harness from the project root:
 
 ```bash
-python3 harness.py <target> 
+python3 harness.py --target example.com 
+``` 
 
 ---
 
@@ -174,7 +175,7 @@ python3 harness.py example.com
 [*] Ports saved to outputs/example.com/ports.txt
 [*] Vulns saved to outputs/example.com/vulns.txt
 [*] Reports written to report.md and report.json
-
+```
 ---
 
 
@@ -187,21 +188,28 @@ Artifacts from this run:
 
 ---
 
-**Visual Proof**
+📸 Visual Proof
+
 
 ![Sample Run Screenshot](./artifacts/example.com/sample_run.png)
 
-## 🔎 Recon Phase (Visual Proof)
+---
+
+🔎 Recon Phase
 
 ![Recon Screenshot](./artifacts/example.com/recon.png)  
 *Recon module discovering open ports and subdomains for example.com*
 
-## 💥 Exploitation Phase (Visual Proof)
+---
+
+💥 Exploitation Phase
 
 ![Exploitation Screenshot](./artifacts/example.com/exploitation.png)  
 *AI‑Adversarial Payload Generator creating mutated payloads for testing defenses*
 
-## 🛡️ Replay Phase (Visual Proof)
+---
+
+🛡️ Replay Phase
 
 ![Replay Screenshot](./artifacts/example.com/replay.png)  
 *Reviewing and replaying generated payloads for SOC‑style analysis*
