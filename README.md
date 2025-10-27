@@ -247,17 +247,9 @@ Artifacts from this run:
 
 ## 🛠️ Roadmap
 
-**Recon & Scanning**
-- [ ] Port scanning
-- [ ] Subdomain fuzzing
-- [ ] Recursive subdomain scanning
-
-**Replay & Reproducibility**
-- [ ] S2E PoC replay capsule
-- [ ] SOC replay capsule (deterministic incident replays)
-
-**Logging & Analysis**
-- [ ] Logging enumeration per target
+- ✅ **Phase 1 (Complete):** Recon, Vulnscan, Exploit harness with reproducible proof
+- 🔵 **Phase 2 (In Progress):** Expansion — AI Payload Generator delivered (visual proof below), Supply Chain & IoT modules upcoming
+- ⚪ **Phase 3 (Upcoming):** Post‑Quantum, Red/Blue AI Loop, Professional Audit Reports
 
 ---
 
