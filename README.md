@@ -104,33 +104,39 @@ Phase 2 extends ShadowOps Lab into advanced offensive and defensive domains wh
 ---
 
 ## 📌 Executive Summary
-ShadowOps Lab is more than a project — it’s a reproducible, next‑gen security framework that proves mastery across offensive and defensive domains. It demonstrates:  
-- **Immediate job‑readiness (Phase 1)**  
-- **Clear growth potential (Phase 2)**  
-- **Long‑term vision (Phase 3)**  
+ShadowOps Lab is a reproducible, next‑gen security framework for offensive and defensive domains.
 
-For recruiters and reviewers, it signals a candidate who can attack, defend, and innovate — all with reproducibility and clarity.
+- ✅ **Phase 1 (Complete):** Recon, Vulnscan, Exploit harness with reproducible proof
+- 🔵 **Phase 2 (In Progress):** AI Payload Generator delivered (visual proof below), Supply Chain & IoT modules upcoming
+- ⚪ **Phase 3 (Upcoming):** Post‑Quantum, Red/Blue AI Loop, Professional Audit Reports
+
+This framework is designed for candidates who can attack, defend, and innovate with reproducibility and clarity.
 
 ---
 
-## 📦 Current Modules
-- `probes/subenum.py` → Deterministic subdomain enumeration  
-- `probes/portscan.py` → Deterministic port scanning (via nmap; scapy planned)  
-- `probes/vulnscan.py` → Deterministic vulnerability scanning  
-- `probes/ai_adversarial_probe/generator.py` → Generates mutated adversarial payloads with reproducible SHA256 checksums (Phase 2 module) 
+## ⚙️ Current Modules
+- `probes/subenum.py` — Deterministic subdomain enumeration  
+  *Proof: see Recon screenshot in README*
+- `probes/portscan.py` — Deterministic port scanning (via nmap)  
+  *Proof: see Recon screenshot in README*
+- `probes/vulnscan.py` — Deterministic vulnerability scanning  
+  *Proof: see Exploitation screenshot in README*
+- `probes/adversarial_probe/generator.py` — Generates mutated adversarial probes with reproducible SHA256 checksums (Phase 2)  
+  *Proof: see Exploitation + Replay screenshots in README*
 
-**Additional probes scaffolded for integration:**  
-- `ai_adversarial_probe/`  
-- `insider_threat_probe/`  
-- `iot_probe/`  
-- `supply_chain_probe/`  
+**Scaffolded for integration:**
+- `a1_adversarial_probe/`
+- `supply_chain_probe/`
+- `threat_growth_probe/`
 
 ---
 
 ## 📦 Requirements
-- Python 3.10+  
-- nmap 7.93+ (for portscan and vulnscan)  
-- assetfinder (optional; subenum has a built‑in fallback)  
+- Python 3.10+
+- nmap 7.93+ (for portscan and vulnscan)
+- Adversifier (optional: subenum has built‑in adversarial capabilities)
+
+*All requirements validated in CI/CD pipeline (see build badge above).*
 
 ---
 
