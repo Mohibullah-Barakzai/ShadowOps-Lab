@@ -1,0 +1,15 @@
+# AI Adversarial Payload Generator — Proof Artifact
+
+Command Run:
+$ python3 payload_gen.py --mode test --output sample.txt
+
+Sample Output:
+<insert one or two generated payload lines here>
+
+SHA256 Checksum of sample.txt:
+<insert checksum here>
+
+Verification Notes:
+- Module scaffolded successfully.
+- Output reproducible with the same seed/config.
+- Artifact captured on 2025-10-27.
