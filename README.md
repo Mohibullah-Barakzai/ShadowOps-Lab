@@ -266,7 +266,9 @@ Artifacts from this run:
 ![Phase 1](https://img.shields.io/badge/Phase%201-complete-brightgreen)
 ![Phase 2](https://img.shields.io/badge/Phase%202-complete-brightgreen)
 ![Phase 3](https://img.shields.io/badge/Phase%203-complete-brightgreen)
-![Phase 4](https://img.shields.io/badge/Phase%204-planned-lightgrey)
+![Phase 4](https://img.shields.io/badge/Phase%204-in%20progress-blue)
+
+---
 
 ### ✅ Phase 1 — Foundation (Completed)
 - ![done](https://img.shields.io/badge/status-complete-brightgreen)
@@ -322,8 +324,7 @@ Phase 3 extends ShadowOps‑Lab into advanced offensive and defensive domains 
 
 ✅ **Outcome:** ShadowOps‑Lab evolves into a **living, audit‑grade portfolio** that demonstrates forward‑looking adversarial capabilities, SOC automation, and recruiter‑relevant case studies — bridging technical mastery with business clarity.
 
-## 📊 Roadmap
-...Phase 1–4 sections...
+---
 
 ### 📷 Proof Screenshots
 - ![verify.sh run](artifacts/proof/verify-20251027.png)  
