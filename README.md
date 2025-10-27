@@ -258,12 +258,48 @@ Artifacts from this run:
 • 	Reports are generated in both Markdown and JSON
 ---
 
+## 🚀 Project Roadmap
 
-## 🛠️ Roadmap
+### ✅ Phase 1 — Foundation (Completed)
+- ![done](https://img.shields.io/badge/status-complete-brightgreen)
+- Recon, Vulnscan, Exploit harness with reproducible proof
+- First artifacts published and verified
 
-- ✅ **Phase 1 (Complete):** Recon, Vulnscan, Exploit harness with reproducible proof
-- 🔵 **Phase 2 (In Progress):** Expansion — AI Payload Generator delivered (visual proof below), Supply Chain & IoT modules upcoming
-- ⚪ **Phase 3 (Upcoming):** Post‑Quantum, Red/Blue AI Loop, Professional Audit Reports
+### ✅ Phase 2 — Stabilization (Completed)
+- ![done](https://img.shields.io/badge/status-complete-brightgreen)
+- Global `.gitignore` + clean working tree
+- Recruiter‑ready `README.md` with badges, artifacts, and contact links
+- AI Adversarial Payload Generator module scaffolded + SHA256‑verified outputs
+- **v1.0 — First Stable Release (24 Oct 2025)**
+
+---
+
+### 🔜 Phase 3 — Expansion (In Progress)
+- ![in-progress](https://img.shields.io/badge/status-in%20progress-blue)
+- **Automation Upgrades**  
+  - Scripted validation routines for harness modules  
+  - Auto‑triage + reproducible replay
+
+- **SOC Replay Capsule**  
+  - End‑to‑end incident replay for recruiter demo  
+  - Linked artifacts with audit‑grade traceability
+
+- **Next‑Gen Modules**  
+  - Modular adversarial probes  
+  - Extended cross‑platform harness support
+
+- **Recruiter Impact Enhancements**  
+  - Visual timeline + capsule artifacts  
+  - Polished executive summaries tied to real outputs
+
+---
+
+### 📌 Phase 4 — Future (Planned)
+- ![planned](https://img.shields.io/badge/status-planned-lightgrey)
+- Full database‑backed pharmacy management integration  
+- Compliance + privacy enforcement modules  
+- Continuous SOC simulation environment  
+- Public showcase capsule with reproducible demos
 
 ---
 
