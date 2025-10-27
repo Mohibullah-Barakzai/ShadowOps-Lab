@@ -1,1 +1,9 @@
-Phase 4 payload test - Mon Oct 27 02:22:44 PM EDT 2025
+=== Phase 4 Payload Generator Run @ 2025-10-27 14:24:12 ===
+[Variant 1] Plain payload:
+Phase4-Payload-Test
+[Variant 2] Base64 encoded:
+UGhhc2U0LVBheWxvYWQtVGVzdA==
+[Variant 3] Hex encoded:
+5068617365342d5061796c6f61642d54657374
+[Variant 4] ROT13 obfuscated:
+Cunfr4-Cnlybnq-Grfg
