@@ -1,0 +1,4 @@
+=== SOC Automation Enhancer Report ===
+Correlated Event: [2025-10-27 20:45] ALERT: Suspicious login from 192.168.1.50
+Correlated Event: [2025-10-27 20:46] ALERT: Multiple failed SSH attempts from 10.0.0.23
+Correlated Event: [2025-10-27 20:47] ALERT: Outbound connection to known C2 domain
