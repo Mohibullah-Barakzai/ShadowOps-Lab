@@ -189,6 +189,11 @@ Artifacts from this run:
 
 ![Recon Screenshot](./artifacts/example.com/recon.png)
 
+
+## 💥 Exploitation Phase (Visual Proof)
+
+![Exploitation Screenshot](./artifacts/example.com/exploitation.png)
+
 ---
 
 
