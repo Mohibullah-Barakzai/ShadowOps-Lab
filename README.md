@@ -185,6 +185,10 @@ Artifacts from this run:
 
 ![Sample Run Screenshot](./artifacts/example.com/sample_run.png)
 
+## 🔎 Recon Phase (Visual Proof)
+
+![Recon Screenshot](./artifacts/example.com/recon.png)
+
 ---
 
 
