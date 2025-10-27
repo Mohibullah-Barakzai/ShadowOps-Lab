@@ -81,25 +81,27 @@
 
 ---
 
-## 🚀 Phase 2 – Expansion (1–2 Months)
-
-Phase 2 extends ShadowOps Lab into advanced offensive and defensive domains while preserving its core principles of **reproducibility, audit‑grade rigor, and modular design**.
-
-### 🎯 Key Objectives
-- **Supply Chain Attack Simulator** → Model dependency hijacking and package‑level threats  
-- **IoT Exploit Capsule** → Demonstrate attacks against embedded/IoT devices  
-- **AI‑Adversarial Payload Generator** → Explore adaptive adversaries with AI‑mutated payloads  
-- **Cross‑Platform Proof** → Validate harness portability across Linux, macOS, and Windows  
-
-✅ **Outcome:** By the end of Phase 2, ShadowOps Lab will demonstrate **scalability across multiple domains** while maintaining symmetry between probes and replay capsules.
+### ✅ Phase 2 — Stabilization (Completed)
+- ![done](https://img.shields.io/badge/status-complete-brightgreen)
+- [Global `.gitignore` + clean working tree](artifacts/git-status-proof.txt)
+- [Recruiter‑ready `README.md` with badges, artifacts, and contact links](README.md)
+- [AI Adversarial Payload Generator scaffolded + SHA256‑verified outputs](artifacts/payload-gen-output.txt)
+- **v1.0 — First Stable Release (24 Oct 2025)**
 
 ---
 
-## 🌍 Phase 3 (Global Shine – 3–6 Months)
-- Post‑Quantum Crypto Audit Module  
-- Self‑Evolving Red/Blue AI Loop  
-- Professional Docs + Demo Video  
-- Branding → *“The Open‑Source Next‑Gen Pentest & SOC Training Framework”*  
+### 🔜 Phase 3 — Expansion (In Progress)
+- ![in-progress](https://img.shields.io/badge/status-in%20progress-blue)
+
+Phase 3 extends ShadowOps‑Lab into advanced offensive and defensive domains while preserving its core principles of **reproducibility, audit‑grade rigor, and modular design**.
+
+#### 🎯 Key Objectives
+- **Supply Chain Attack Simulator** → Model dependency hijacking and package‑level threats  
+- **IoT Exploit Capsule** → Demonstrate attacks against embedded/IoT devices  
+- **AI‑Adversarial Payload Generator (Advanced)** → Explore adaptive adversaries with AI‑mutated payloads  
+- **Cross‑Platform Proof** → Validate harness portability across Linux, macOS, and Windows  
+
+✅ **Outcome:** By the end of Phase 3, ShadowOps‑Lab will demonstrate **scalability across multiple domains** while maintaining symmetry between probes and replay capsules. 
 
 ---
 
@@ -258,39 +260,50 @@ Artifacts from this run:
 • 	Reports are generated in both Markdown and JSON
 ---
 
-## 🚀 Project Roadmap (ShadowOps‑Lab — Security Harness)
+## 🛠 Project Roadmap — ShadowOps‑Lab
 
 ### ✅ Phase 1 — Foundation (Completed)
 - ![done](https://img.shields.io/badge/status-complete-brightgreen)
 - [Recon, Vulnscan, Exploit harness with reproducible proof](artifacts/recon-output.txt)
 - [First artifacts published and verified](artifacts/verification-log.txt)
 
+---
+
 ### ✅ Phase 2 — Stabilization (Completed)
 - ![done](https://img.shields.io/badge/status-complete-brightgreen)
-- Global `.gitignore` + clean working tree
-- Recruiter‑ready `README.md` with badges, artifacts, and contact links
-- AI Adversarial Payload Generator module scaffolded + SHA256‑verified outputs
+- [Global `.gitignore` + clean working tree](artifacts/git-status-proof.txt)
+- [Recruiter‑ready `README.md` with badges, artifacts, and contact links](README.md)
+- [AI Adversarial Payload Generator scaffolded + SHA256‑verified outputs](artifacts/payload-gen-output.txt)
 - **v1.0 — First Stable Release (24 Oct 2025)**
 
 ---
 
 ### 🔜 Phase 3 — Expansion (In Progress)
 - ![in-progress](https://img.shields.io/badge/status-in%20progress-blue)
+
+Phase 3 extends ShadowOps‑Lab into advanced offensive and defensive domains while preserving its core principles of **reproducibility, audit‑grade rigor, and modular design**.
+
+#### 🎯 Key Objectives
 - **Automation Upgrades**  
   - Scripted validation routines for harness modules  
-  - Auto‑triage + reproducible replay
+  - Auto‑triage + reproducible replay  
+  - [Planned artifacts](artifacts/automation/)
 
 - **SOC Replay Capsule**  
   - End‑to‑end incident replay for recruiter demo  
-  - Linked artifacts with audit‑grade traceability
+  - [Linked artifacts with audit‑grade traceability](soc-replay/reports/)  
 
 - **Next‑Gen Modules**  
   - Modular adversarial probes  
-  - Extended cross‑platform harness support
+  - Extended cross‑platform harness support  
+  - [Planned artifacts](artifacts/next-gen/)
 
 - **Recruiter Impact Enhancements**  
   - Visual timeline + capsule artifacts  
-  - Polished executive summaries tied to real outputs
+  - Polished executive summaries tied to real outputs  
+  - [Planned artifacts](artifacts/recruiter-impact/)
+
+✅ **Outcome:** By the end of Phase 3, ShadowOps‑Lab will demonstrate **scalability across multiple domains** while maintaining symmetry between probes and replay capsules.
 
 ---
 
@@ -299,6 +312,8 @@ Artifacts from this run:
 - Continuous SOC simulation environment  
 - Public showcase capsule with reproducible demos  
 - Extended adversarial AI modules  
+
+✅ **Outcome:** ShadowOps‑Lab evolves into a **next‑gen pentest & SOC training framework**, with professional polish, reproducible demos, and global visibility. 
 
 ---
 

@@ -5,3 +5,7 @@ soc_replay/logs/
 modules/ai-payloads/artifacts/
 __pycache__/
 *.pyc
+
+# Ignore scratch/test artifacts but keep curated proofs
+artifacts/20*/              # ignore timestamped run folders (e.g., 20251026_…)
+artifacts/recon-sample.md   # ignore sample file
