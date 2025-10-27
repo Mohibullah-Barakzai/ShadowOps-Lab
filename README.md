@@ -1,14 +1,17 @@
-# ShadowOps Lab  
-[![Verify Checksums](https://github.com/Mohibullah-Barakzai/ShadowOps-Lab/actions/workflows/checksums.yml/badge.svg)](https://github.com/Mohibullah-Barakzai/ShadowOps-Lab/actions/workflows/checksums.yml)
+# ShadowOps Lab
+[![Verify Checksums](https://github.com/Mohibullah-Barakzai/ShadowOps-Lab/actions/workflows/checksums.yml/badge.svg)](https://github.com/Mohibullah-Barakzai/ShadowOps-Lab/actions/workflows/checksums.yml)  
 **Attack like a pentester, defend like a SOC analyst — all in one reproducible lab.**
 
-> 🚀 Phase 4 in progress: Adversarial Payload Generator and SOC Automation Enhancer are live — Recruiter Case Study and Cross‑Domain Tie‑In coming next
+<p align="center">
+  🚀 Phase 4 in progress: Adversarial Payload Generator and SOC Automation Enhancer are live — Recruiter Case Study and Cross‑Domain Tie‑In coming next
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Phase%201-Complete-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Phase%202-In%20Progress-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Phase%203-Upcoming-lightgrey?style=for-the-badge" />
 </p>
+
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Mohibullah-Barakzai/ShadowOps-Lab)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Mohibullah-Barakzai/ShadowOps-Lab)
