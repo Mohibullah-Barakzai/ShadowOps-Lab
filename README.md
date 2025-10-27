@@ -315,7 +315,12 @@ Phase 3 extends ShadowOps‑Lab into advanced offensive and defensive domains 
 - **Cross‑Domain Security Tie‑In (Optional)** — applying the harness methodology to a secondary domain (e.g., healthcare/pharmacy security)  
 
 ✅ **Outcome:** ShadowOps‑Lab evolves into a **living, audit‑grade portfolio** that demonstrates forward‑looking adversarial capabilities, SOC automation, and recruiter‑relevant case studies — bridging technical mastery with business clarity. 
+## 📊 Roadmap
+...Phase 1–4 sections...
 
+### 📷 Proof Screenshots
+- ![verify.sh run](artifacts/proof/verify-20251027.png)  
+  *Screenshot of verify.sh confirming Phase 1–3 artifacts and baseline integrity (2025‑10‑27).*
 ---
 
 ## 🌐 Vision: Beyond ShadowOps‑Lab
