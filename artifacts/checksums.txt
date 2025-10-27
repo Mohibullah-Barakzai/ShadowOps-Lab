@@ -1,10 +1,4 @@
-=== ShadowOps-Lab Verification ===
-Phase 1: PASS (recon-output.txt, verification-log.txt found)
 3e39777357133df198932e27dca793dc90227f735f8a570d077debd825f1648b  artifacts/recon-output.txt
 d7bec9e5efe30ba878dce9f47f9da22883f74d1e4350183da4c707b6bd2a300e  artifacts/verification-log.txt
-Phase 2: PASS (git-status-proof.txt, payload-gen-output.txt found)
 31e9de636c83c0a84b9d37928c1c0f08c0806423972cb557168e6e13d6032e3b  artifacts/git-status-proof.txt
 1a3afd87589b66698573d19cb9390a3b7800fb9bf13c08fa2ef607ed1c12c380  artifacts/payload-gen-output.txt
-Phase 3: PLACEHOLDER (Phase 3 scaffold present)
-Phase 4: PLANNED (no artifacts expected yet)
-=== Overall: PASS (all required artifacts present) ===
