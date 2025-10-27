@@ -187,17 +187,18 @@ Artifacts from this run:
 
 ## 🔎 Recon Phase (Visual Proof)
 
-![Recon Screenshot](./artifacts/example.com/recon.png)
-
+![Recon Screenshot](./artifacts/example.com/recon.png)  
+*Recon module discovering open ports and subdomains for example.com*
 
 ## 💥 Exploitation Phase (Visual Proof)
 
-![Exploitation Screenshot](./artifacts/example.com/exploitation.png)
-
+![Exploitation Screenshot](./artifacts/example.com/exploitation.png)  
+*AI‑Adversarial Payload Generator creating mutated payloads for testing defenses*
 
 ## 🛡️ Replay Phase (Visual Proof)
 
-![Replay Screenshot](./artifacts/example.com/replay.png)
+![Replay Screenshot](./artifacts/example.com/replay.png)  
+*Reviewing and replaying generated payloads for SOC‑style analysis*
 
 
 ---
