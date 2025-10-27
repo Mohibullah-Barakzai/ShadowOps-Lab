@@ -262,8 +262,8 @@ Artifacts from this run:
 
 ### ✅ Phase 1 — Foundation (Completed)
 - ![done](https://img.shields.io/badge/status-complete-brightgreen)
-- Recon, Vulnscan, Exploit harness with reproducible proof
-- First artifacts published and verified
+- [Recon, Vulnscan, Exploit harness with reproducible proof](artifacts/recon-output.txt)
+- [First artifacts published and verified](artifacts/verification-log.txt)
 
 ### ✅ Phase 2 — Stabilization (Completed)
 - ![done](https://img.shields.io/badge/status-complete-brightgreen)
