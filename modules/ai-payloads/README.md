@@ -1,18 +1,21 @@
 # 🤖 AI-Adversarial Payload Generator
 
-**Purpose:**  
-This module explores next‑generation adversarial payloads — fuzzing, mutation, and AI‑driven variations — to simulate how attackers may weaponize automation against modern defenses.
+The AI-Adversarial Payload Generator is part of **Phase 2** of ShadowOps Lab.  
+It explores next‑generation fuzzing and adversarial testing by generating **mutated payloads** that simulate adaptive attacker behavior.
 
-**Features (Planned):**
-- AI‑mutated HTTP header fuzzing
-- Token/parameter mutation for web apps
-- Replay capsule integration for SOC validation
-- Cross‑platform reproducibility
+---
 
-**Artifacts:**
-- `artifacts/` → stores generated payloads, logs, and reports
-- Each run is timestamped for auditability
+## 📂 Module Structure
+- `harness.sh` — main harness script; generates timestamped artifacts for each run  
+- `artifacts/` — auto‑created per run, containing:
+  - `run.log` — execution log with timestamp and payload generation details  
+  - `payloads.txt` — randomized adversarial payloads (e.g., mutated HTTP headers)  
 
-**Usage (stub):**
+---
+
+## 🖥️ Usage
+From inside the module folder:
+
 ```bash
-./harness.sh --target <URL> --mode fuzz
+cd modules/ai-payloads
+./harness.sh

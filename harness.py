@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from probes.ai_adversarial_probe import generator as ai_payload
 import argparse
 import hashlib
 import json
@@ -55,6 +56,17 @@ def run_vulnscan(target, outdir):
     print(f"[+] Total vulnerabilities discovered: {count}")
     return {"output_file": outfile, "checksum": checksum, "count": count}
 
+def run_ai_payload(seed, outdir):
+    # Generate payload using AI module
+    payload = ai_payload.generate_payload(seed)
+    ai_payload.save_payload(payload, seed)
+    # We don’t write to outdir here because generator handles its own outputs
+    return {
+        "seed": seed,
+        "output_dir": "outputs/ai_payloads/",
+        "note": "Mutated payloads with SHA256 checksums"
+    }
+
 def build_report(target, results, outdir):
     # Map vulnscan findings as Medium, portscan findings as Low
     severity_counts = {
@@ -71,7 +83,6 @@ def build_report(target, results, outdir):
         severity_counts["Medium"] * 50 +
         severity_counts["Low"] * 10
     )
-
     executive_summary = (
         f"**Executive Summary:** Identified {total_findings} findings "
         f"(🛑 Critical: {severity_counts['Critical']}, "
@@ -89,7 +100,8 @@ def build_report(target, results, outdir):
         "weighted_score": weighted_score,
         "subenum": results["subdomain_enum"],
         "portscan": results["portscan"],
-        "vulnscan": results["vulnscan"]
+        "vulnscan": results["vulnscan"],
+        "ai_payload": results["ai_payload"]
     }
 
     # Write JSON
@@ -113,14 +125,18 @@ def build_report(target, results, outdir):
         f.write("### Vulnerability Artifacts\n")
         f.write(f"- Vulns file: `{results['vulnscan']['output_file']}`\n")
         f.write(f"- SHA256 checksum: `{results['vulnscan']['checksum']}`\n")
-        f.write(f"- Count: {results['vulnscan']['count']}\n")
+        f.write(f"- Count: {results['vulnscan']['count']}\n\n")
+        f.write("### AI Payload Artifacts\n")
+        f.write(f"- Seed: `{results['ai_payload']['seed']}`\n")
+        f.write(f"- Output dir: `{results['ai_payload']['output_dir']}`\n")
+        f.write(f"- Note: {results['ai_payload']['note']}\n")
 
     print(f"[+] Reports written to {md_path} and {json_path}")
 
 def main():
     parser = argparse.ArgumentParser(description="ShadowOps-Lab Harness")
     parser.add_argument("--target", required=True, help="Target domain or IP")
-    parser.add_argument("--module", choices=["subdomain_enum", "portscan", "vulnscan"], help="Run a specific module")
+    parser.add_argument("--module", choices=["subdomain_enum", "portscan", "vulnscan", "ai_payload"], help="Run a specific module")
     args = parser.parse_args()
 
     timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -135,15 +151,18 @@ def main():
         results["portscan"] = run_portscan(args.target, outdir)
     elif args.module == "vulnscan":
         results["vulnscan"] = run_vulnscan(args.target, outdir)
+    elif args.module == "ai_payload":
+        results["ai_payload"] = run_ai_payload("shadowops", outdir)
     else:
         results["subdomain_enum"] = run_subdomain_enum(args.target, outdir)
         results["portscan"] = run_portscan(args.target, outdir)
         results["vulnscan"] = run_vulnscan(args.target, outdir)
+        results["ai_payload"] = run_ai_payload("shadowops", outdir)
 
     # Ensure all keys exist for report
-    for key in ["subdomain_enum", "portscan", "vulnscan"]:
+    for key in ["subdomain_enum", "portscan", "vulnscan", "ai_payload"]:
         if key not in results:
-            results[key] = {"output_file": "", "checksum": "", "count": 0}
+            results[key] = {"output_file": "", "checksum": "", "count": 0} if key != "ai_payload" else {"seed": "", "output_dir": "", "note": ""}
 
     build_report(args.target, results, outdir)
 
