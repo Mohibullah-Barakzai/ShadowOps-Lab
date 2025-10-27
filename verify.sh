@@ -46,6 +46,14 @@ else
   pass=false
 fi
 
+if [[ -f artifacts/next-gen/nextgen-proof.txt ]]; then
+  echo "  PASS (Next-Gen Module Placeholder present)"
+  sha256sum artifacts/next-gen/nextgen-proof.txt
+else
+  echo "  FAIL (Next-Gen Module Placeholder missing)"
+  pass=false
+fi
+
 # Phase 4 checks (planned only)
 echo "Phase 4: PLANNED (no artifacts expected yet)"
 
@@ -58,7 +66,9 @@ if [[ "$1" == "--baseline" ]]; then
           artifacts/git-status-proof.txt \
           artifacts/payload-gen-output.txt \
           soc-replay/reports/replay-proof.txt \
-          artifacts/automation/auto-proof.txt > artifacts/checksums.txt
+          artifacts/automation/auto-proof.txt \
+          artifacts/next-gen/nextgen-proof.txt > artifacts/checksums.txt
+
   echo "Baseline written to artifacts/checksums.txt"
   exit 0
 fi
