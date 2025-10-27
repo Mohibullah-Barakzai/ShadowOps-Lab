@@ -1,5 +1,4 @@
 *.bak
-artifacts/
 outputs/
 logs/
 soc_replay/logs/
