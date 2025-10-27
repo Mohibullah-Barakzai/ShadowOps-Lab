@@ -1,0 +1,19 @@
+name: Verify Checksums
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Verify checksums
+        run: |
+          cd artifacts/example.com
+          sha256sum -c checksums.txt
