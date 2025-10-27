@@ -262,6 +262,12 @@ Artifacts from this run:
 
 ## 🛠 Project Roadmap — ShadowOps‑Lab
 
+## 📊 Roadmap Progress
+![Phase 1](https://img.shields.io/badge/Phase%201-complete-brightgreen)
+![Phase 2](https://img.shields.io/badge/Phase%202-complete-brightgreen)
+![Phase 3](https://img.shields.io/badge/Phase%203-complete-brightgreen)
+![Phase 4](https://img.shields.io/badge/Phase%204-planned-lightgrey)
+
 ### ✅ Phase 1 — Foundation (Completed)
 - ![done](https://img.shields.io/badge/status-complete-brightgreen)
 - [Recon, Vulnscan, Exploit harness with reproducible proof](artifacts/recon-output.txt)
