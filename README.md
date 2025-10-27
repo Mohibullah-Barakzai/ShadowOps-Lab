@@ -328,6 +328,9 @@ Phase 3 extends ShadowOps‑Lab into advanced offensive and defensive domains 
 ### 📷 Proof Screenshots
 - ![verify.sh run](artifacts/proof/verify-20251027.png)  
   *Screenshot of verify.sh confirming Phase 1–3 artifacts and baseline integrity (2025‑10‑27).*
+
+- ![Phase 4 scaffold](artifacts/proof/phase4-scaffold-20251027.png)  
+  *Screenshot of Phase 4 scaffold proof file baseline‑locked with SHA256 (2025‑10‑27).*
 ---
 
 ## 🌐 Vision: Beyond ShadowOps‑Lab
