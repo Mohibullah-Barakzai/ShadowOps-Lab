@@ -1,5 +1,8 @@
 *.bak
 artifacts/
+outputs/
+logs/
+soc_replay/logs/
 modules/ai-payloads/artifacts/
 __pycache__/
 *.pyc
