@@ -258,7 +258,7 @@ Artifacts from this run:
 • 	Reports are generated in both Markdown and JSON
 ---
 
-## 🚀 Project Roadmap
+## 🚀 Project Roadmap (ShadowOps‑Lab — Security Harness)
 
 ### ✅ Phase 1 — Foundation (Completed)
 - ![done](https://img.shields.io/badge/status-complete-brightgreen)
@@ -294,13 +294,28 @@ Artifacts from this run:
 
 ---
 
-### 📌 Phase 4 — Future (Planned)
+### 📌 Phase 4 — Future (Planned, Security Track)
 - ![planned](https://img.shields.io/badge/status-planned-lightgrey)
-- Full database‑backed pharmacy management integration  
-- Compliance + privacy enforcement modules  
 - Continuous SOC simulation environment  
-- Public showcase capsule with reproducible demos
+- Public showcase capsule with reproducible demos  
+- Extended adversarial AI modules  
 
+---
+
+## 🌐 Vision: Beyond ShadowOps‑Lab
+
+**Executive Summary**  
+ShadowOps‑Lab demonstrates my mastery in building **audit‑grade, reproducible security systems**. The same rigor will extend into **healthcare and business domains**, where privacy, compliance, and trust are paramount.
+
+### Long‑Term Direction
+- **Pharmacy Management System**  
+  - Self‑hosted, database‑backed, privacy‑first  
+  - Full auditability and compliance enforcement  
+  - Modular workflows for healthcare operations  
+
+- **Cross‑Domain Application**  
+  - Applying security harness principles to healthcare and enterprise systems  
+  - Automation + reproducibility as universal standards
 ---
 
 
