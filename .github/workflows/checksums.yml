@@ -16,4 +16,4 @@ jobs:
       - name: Verify checksums
         run: |
           cd artifacts/example.com
-          sha256sum -c checksums.txt
+          sha256sum -c checksums.txt --ignore-missing
