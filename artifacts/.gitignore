@@ -1,0 +1,5 @@
+*.bak
+artifacts/
+modules/ai-payloads/artifacts/
+__pycache__/
+*.pyc
