@@ -194,6 +194,12 @@ Artifacts from this run:
 
 ![Exploitation Screenshot](./artifacts/example.com/exploitation.png)
 
+
+## 🛡️ Replay Phase (Visual Proof)
+
+![Replay Screenshot](./artifacts/example.com/replay.png)
+
+
 ---
 
 
