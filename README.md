@@ -152,10 +152,6 @@ This framework is designed for candidates who can attack, defend, and innovate w
 
 ---
 
-🗂️ Repository Structure  
-
----
-
 ## 🗂️ Repository Structure
 ```text
 ShadowOps-Lab/
