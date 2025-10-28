@@ -73,12 +73,14 @@
 ---
 
 ## 🛠️ Phase 1 (MVP – Job‑Ready in 2–3 Weeks)
+- ![done](https://img.shields.io/badge/status-complete-brightgreen)
+
 - **Recon & Exploit Harness** → automated recon + one exploit module (AI‑mutated web fuzzing)  
 - **SOC Replay Capsule** → logs + replay timeline + Sigma/YARA rules  
 - **Executive Summary Generator** → severity distribution + one‑line risk profile  
 - **README.md** → polished storytelling + reproducibility showcase  
 
-👉 This is enough to land interviews as a SOC Analyst or Junior Pentester.
+👉 This was enough to land interviews as a SOC Analyst or Junior Pentester.
 
 ---
 
@@ -91,10 +93,10 @@
 
 ---
 
-### 🔜 Phase 3 — Expansion (In Progress)
-- ![in-progress](https://img.shields.io/badge/status-in%20progress-blue)
+### ✅ Phase 3 — Expansion (Completed)
+- ![done](https://img.shields.io/badge/status-complete-brightgreen)
 
-Phase 3 extends ShadowOps‑Lab into advanced offensive and defensive domains while preserving its core principles of **reproducibility, audit‑grade rigor, and modular design**.
+Phase 3 extended ShadowOps‑Lab into advanced offensive and defensive domains while preserving its core principles of **reproducibility, audit‑grade rigor, and modular design**.
 
 ---
 
