@@ -110,7 +110,7 @@ Phase 4 focuses on delivering advanced offensive/defensive modules and packagi
 - **Recruiter Case Study Artifact** → 🔄 In Progress  
 - **Cross‑Domain Security Tie‑In (Optional)** → 🔄 Planned  
 
-✅ **Outcome:** ShadowOps‑Lab evolves into a **living, audit‑grade portfolio** that demonstrates forward‑looking adversarial capabilities, SOC automation, and recruiter‑relevant case studies — bridging technical mastery with business impact.
+✅ **Outcome:** ShadowOps‑Lab evolves into a living, audit‑grade portfolio that demonstrates forward‑looking adversarial capabilities, SOC automation, and recruiter‑relevant case studies — bridging technical mastery with business impact.
 
 ---
 
