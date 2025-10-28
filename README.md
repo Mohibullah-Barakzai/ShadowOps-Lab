@@ -185,6 +185,7 @@ python3 harness.py example.com
 [*] Reports written to report.md and report.json
 ```
 
+```bash
 python3 harness.py example.com
 [*] Subdomains saved to outputs/example.com/subdomains.txt
 [*] Ports saved to outputs/example.com/ports.txt
