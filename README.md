@@ -96,6 +96,22 @@
 
 Phase 3 extends ShadowOps‑Lab into advanced offensive and defensive domains while preserving its core principles of **reproducibility, audit‑grade rigor, and modular design**.
 
+---
+
+### 🚀 Phase 4 — Advanced Modules & Recruiter Amplification (In Progress)
+- ![in-progress](https://img.shields.io/badge/status-in%20progress-blue)
+
+Phase 4 focuses on delivering advanced offensive/defensive modules and packaging them into recruiter‑friendly artifacts.
+
+- **Adversarial Payload Generator** → ✅ Complete (baseline‑locked, SHA256 verified)  
+- **SOC Automation Enhancer** → ✅ Complete (baseline‑locked, SHA256 verified)  
+- **Recruiter Case Study Artifact** → 🔄 In Progress  
+- **Cross‑Domain Security Tie‑In (Optional)** → 🔄 Planned  
+
+✅ **Outcome:** ShadowOps‑Lab evolves into a **living, audit‑grade portfolio** that demonstrates forward‑looking adversarial capabilities, SOC automation, and recruiter‑relevant case studies — bridging technical mastery with business impact.
+
+---
+
 #### 🎯 Key Objectives
 - **Supply Chain Attack Simulator** → Model dependency hijacking and package‑level threats  
 - **IoT Exploit Capsule** → Demonstrate attacks against embedded/IoT devices  
