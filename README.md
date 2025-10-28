@@ -86,9 +86,10 @@
 
 ### ✅ Phase 2 — Stabilization (Completed)
 - ![done](https://img.shields.io/badge/status-complete-brightgreen)
-- [Global `.gitignore` + clean working tree](artifacts/git-status-proof.txt)
-- [Recruiter‑ready `README.md` with badges, artifacts, and contact links](README.md)
-- [AI Adversarial Payload Generator scaffolded + SHA256‑verified outputs](artifacts/payload-gen-output.txt)
+
+- Global .gitignore + clean working tree  
+- Recruiter‑ready README.md with badges, artifacts, and contact links  
+- AI Adversarial Payload Generator scaffolded + SHA256‑verified outputs  
 - **v1.0 — First Stable Release (24 Oct 2025)**
 
 ---
