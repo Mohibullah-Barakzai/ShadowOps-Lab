@@ -166,9 +166,6 @@ ShadowOps-Lab/
 
 ---
 
-
----
-
 ## ⚡ Usage
 *One‑line command to launch a full recon → scan → report pipeline.*
 
@@ -176,10 +173,17 @@ Run the harness from the project root:
 
 ```bash
 python3 harness.py --target example.com
- 
-``` 
+```
 
----
+## 📊 Sample Run:
+
+```
+python3 harness.py example.com
+[*] Subdomains saved to outputs/example.com/subdomains.txt
+[*] Ports saved to outputs/example.com/ports.txt
+[*] Vulns saved to outputs/example.com/vulns.txt
+[*] Reports written to report.md and report.json
+```
 
 python3 harness.py example.com
 [*] Subdomains saved to outputs/example.com/subdomains.txt
@@ -187,8 +191,6 @@ python3 harness.py example.com
 [*] Vulns saved to outputs/example.com/vulns.txt
 [*] Reports written to report.md and report.json
 ```
----
-
 
 Artifacts from this run:
 - 📄 [subdomains.txt](./artifacts/example.com/subdomains.txt)
