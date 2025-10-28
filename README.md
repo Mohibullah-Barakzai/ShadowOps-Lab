@@ -138,9 +138,9 @@ This framework is designed for candidates who can attack, defend, and innovate w
   *Proof: see Exploitation + Replay screenshots in README*  
 
 **Scaffolded for integration:**  
-- `ai_adversarial_probe/`  
-- `supply_chain_probe/`  
-- `threat_growth_probe/`  
+- `ai_adversarial_probe/`
+- `supply_chain_probe/`
+- `threat_growth_probe/` 
 
 ---
 
