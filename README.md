@@ -115,14 +115,13 @@ Phase 4 focuses on delivering advanced offensive/defensive modules and packagi
 
 ---
 
-
-📌 Executive Summary
+📌 Executive Summary  
 ShadowOps Lab is a reproducible, next‑gen security framework for offensive and defensive domains.
 
 ✅ Phase 1 (Complete): Recon, Vulnscan, Exploit harness with reproducible proof  
 ✅ Phase 2 (Complete): AI Payload Generator delivered, recruiter‑ready README, v1.0 stable release  
 ✅ Phase 3 (Complete): SOC Replay Capsule, recruiter impact artifacts, automation proof  
-🔵 Phase 4 (In Progress): Adversarial Payload Generator + SOC Automation Enhancer ✅ Complete, Recruiter Case Study and Cross‑Domain Tie‑In upcoming
+🔵 Phase 4 (In Progress): Recruiter Case Study and Cross‑Domain Tie‑In upcoming (Adversarial Payload Generator + SOC Automation Enhancer ✅ Complete)
 
 This framework is designed for candidates who can attack, defend, and innovate with reproducibility and clarity.
 
@@ -130,27 +129,30 @@ This framework is designed for candidates who can attack, defend, and innovate w
 
 ## ⚙️ Current Modules
 - `probes/subenum.py` — Deterministic subdomain enumeration  
-  *Proof: see Recon screenshot in README*
+  *Proof: see Recon screenshot in README*  
 - `probes/portscan.py` — Deterministic port scanning (via nmap)  
-  *Proof: see Recon screenshot in README*
+  *Proof: see Recon screenshot in README*  
 - `probes/vulnscan.py` — Deterministic vulnerability scanning  
-  *Proof: see Exploitation screenshot in README*
+  *Proof: see Exploitation screenshot in README*  
 - `probes/adversarial_probe/generator.py` — Generates mutated adversarial probes with reproducible SHA256 checksums (Phase 2)  
-  *Proof: see Exploitation + Replay screenshots in README*
+  *Proof: see Exploitation + Replay screenshots in README*  
 
-**Scaffolded for integration:**
-- `ai_adversarial_probe/`
-- `supply_chain_probe/`
-- `threat_growth_probe/`
+**Scaffolded for integration:**  
+- `ai_adversarial_probe/`  
+- `supply_chain_probe/`  
+- `threat_growth_probe/`  
 
 ---
 
-## 📦 Requirements
-- Python 3.10+
-- nmap 7.93+ (for portscan and vulnscan)
-- Adversifier (optional: subenum has built‑in adversarial capabilities)
+📦 Requirements  
+- Python 3.10+  
+- nmap 7.93+ (for portscan and vulnscan)  
+- Adversifier (optional: subenum has built‑in adversarial capabilities)  
+- All requirements validated in CI/CD pipeline (see build badge above).  
 
-*All requirements validated in CI/CD pipeline (see build badge above).*
+---
+
+🗂️ Repository Structure  
 
 ---
 
@@ -168,22 +170,21 @@ ShadowOps-Lab/
 
 ---
 
+
+---
+
 ## ⚡ Usage
 *One‑line command to launch a full recon → scan → report pipeline.*
 
 Run the harness from the project root:
 
 ```bash
-python3 harness.py --target example.com 
+python3 harness.py --target example.com
+ 
 ``` 
 
 ---
 
-
-
-## 📊 Sample Run
-
-```bash
 python3 harness.py example.com
 [*] Subdomains saved to outputs/example.com/subdomains.txt
 [*] Ports saved to outputs/example.com/ports.txt
