@@ -114,15 +114,6 @@ Phase 4 focuses on delivering advanced offensive/defensive modules and packagi
 
 ---
 
-#### 🎯 Key Objectives
-- **Supply Chain Attack Simulator** → Model dependency hijacking and package‑level threats  
-- **IoT Exploit Capsule** → Demonstrate attacks against embedded/IoT devices  
-- **AI‑Adversarial Payload Generator (Advanced)** → Explore adaptive adversaries with AI‑mutated payloads  
-- **Cross‑Platform Proof** → Validate harness portability across Linux, macOS, and Windows  
-
-✅ **Outcome:** By the end of Phase 3, ShadowOps‑Lab will demonstrate **scalability across multiple domains** while maintaining symmetry between probes and replay capsules. 
-
----
 
 📌 Executive Summary
 ShadowOps Lab is a reproducible, next‑gen security framework for offensive and defensive domains.
