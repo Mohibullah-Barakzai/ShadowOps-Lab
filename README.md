@@ -177,14 +177,6 @@ python3 harness.py --target example.com
 
 ## 📊 Sample Run:
 
-```
-python3 harness.py example.com
-[*] Subdomains saved to outputs/example.com/subdomains.txt
-[*] Ports saved to outputs/example.com/ports.txt
-[*] Vulns saved to outputs/example.com/vulns.txt
-[*] Reports written to report.md and report.json
-```
-
 ```bash
 python3 harness.py example.com
 [*] Subdomains saved to outputs/example.com/subdomains.txt
