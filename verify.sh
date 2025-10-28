@@ -1,30 +1,46 @@
-#!/bin/bash
-# ShadowOps-Lab verification script
-# Checks that each roadmap phase has its expected artifacts + SHA256 integrity
+#!/usr/bin/env bash
+# verify.sh — ShadowOps-Lab artifact verification script
+# Ensures all required artifacts exist and match baseline checksums.
 
-echo "=== ShadowOps-Lab Verification ==="
+set -euo pipefail
 
 pass=true
 
+echo "=== ShadowOps-Lab Verification ==="
+
 # Phase 1 checks
-echo -n "Phase 1: "
-if [[ -f artifacts/recon-output.txt && -f artifacts/verification-log.txt ]]; then
-  echo "PASS (recon-output.txt, verification-log.txt found)"
+echo "Phase 1:"
+if [[ -f artifacts/recon-output.txt ]]; then
+  echo "  PASS (Recon output present)"
   sha256sum artifacts/recon-output.txt
+else
+  echo "  FAIL (Recon output missing)"
+  pass=false
+fi
+
+if [[ -f artifacts/verification-log.txt ]]; then
+  echo "  PASS (Verification log present)"
   sha256sum artifacts/verification-log.txt
 else
-  echo "FAIL (missing Phase 1 artifacts)"
+  echo "  FAIL (Verification log missing)"
   pass=false
 fi
 
 # Phase 2 checks
-echo -n "Phase 2: "
-if [[ -f artifacts/git-status-proof.txt && -f artifacts/payload-gen-output.txt ]]; then
-  echo "PASS (git-status-proof.txt, payload-gen-output.txt found)"
+echo "Phase 2:"
+if [[ -f artifacts/git-status-proof.txt ]]; then
+  echo "  PASS (Git status proof present)"
   sha256sum artifacts/git-status-proof.txt
+else
+  echo "  FAIL (Git status proof missing)"
+  pass=false
+fi
+
+if [[ -f artifacts/payload-gen-output.txt ]]; then
+  echo "  PASS (Payload Generator output present)"
   sha256sum artifacts/payload-gen-output.txt
 else
-  echo "FAIL (missing Phase 2 artifacts)"
+  echo "  FAIL (Payload Generator output missing)"
   pass=false
 fi
 
@@ -54,37 +70,43 @@ else
   pass=false
 fi
 
-# Phase 4 checks (planned only)
-echo "Phase 4: PLANNED (no artifacts expected yet)"
-
-# Baseline comparison
-if [[ "$1" == "--baseline" ]]; then
-  echo
-  echo "Generating clean baseline checksums..."
-  sha256sum artifacts/recon-output.txt \
-          artifacts/verification-log.txt \
-          artifacts/git-status-proof.txt \
-          artifacts/payload-gen-output.txt \
-          soc-replay/reports/replay-proof.txt \
-          artifacts/automation/auto-proof.txt \
-          artifacts/next-gen/nextgen-proof.txt > artifacts/checksums.txt
-
-  echo "Baseline written to artifacts/checksums.txt"
-  exit 0
-fi
-
-if [[ -f artifacts/checksums.txt ]]; then
-  echo
-  echo "=== Baseline Comparison ==="
-  sha256sum -c artifacts/checksums.txt --ignore-missing
+# Phase 4 checks
+echo "Phase 4:"
+if [[ -f artifacts/phase4/payload-gen-output.txt ]] && [[ -f artifacts/phase4/soc-automation-output.txt ]]; then
+  echo "  PASS (Phase 4 artifacts present)"
+  sha256sum artifacts/phase4/payload-gen-output.txt
+  sha256sum artifacts/phase4/soc-automation-output.txt
 else
-  echo
-  echo "No baseline checksums.txt found for comparison."
+  echo "  IN PROGRESS (Phase 4 artifacts missing or incomplete)"
+  pass=false
 fi
 
-# Final summary
-if [ "$pass" = true ]; then
+# Recruiter Case Study (planned Phase 4 deliverable)
+if [[ -f artifacts/recruiter-impact/case-study.md ]]; then
+  echo "  PASS (Recruiter Case Study Artifact present)"
+  sha256sum artifacts/recruiter-impact/case-study.md
+else
+  echo "  TODO (Recruiter Case Study Artifact not yet added)"
+fi
+
+echo
+echo "=== Baseline Comparison ==="
+if [[ -f artifacts/checksums.txt ]]; then
+  sha256sum -c artifacts/checksums.txt || pass=false
+else
+  echo "No baseline checksums found — run './verify.sh --baseline' to generate."
+fi
+
+if [[ "${1:-}" == "--baseline" ]]; then
+  echo "Generating clean baseline checksums..."
+  find artifacts soc-replay -type f ! -name "checksums.txt" -exec sha256sum {} \; > artifacts/checksums.txt
+  echo "Baseline written to artifacts/checksums.txt"
+fi
+
+echo
+if $pass; then
   echo "=== Overall: PASS (all required artifacts present) ==="
 else
-  echo "=== Overall: ATTENTION NEEDED (some artifacts missing) ==="
+  echo "=== Overall: FAIL (one or more artifacts missing or mismatched) ==="
+  exit 1
 fi
