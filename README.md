@@ -122,7 +122,7 @@ ShadowOps Lab is a reproducible, next‑gen security framework for offensive and
 ✅ Phase 1 (Complete): Recon, Vulnscan, Exploit harness with reproducible proof  
 ✅ Phase 2 (Complete): AI Payload Generator delivered, recruiter‑ready README, v1.0 stable release  
 ✅ Phase 3 (Complete): SOC Replay Capsule, recruiter impact artifacts, automation proof  
-🔵 Phase 4 (In Progress): Adversarial Payload Generator + SOC Automation Enhancer live, Recruiter Case Study and Cross‑Domain Tie‑In upcoming
+🔵 Phase 4 (In Progress): Adversarial Payload Generator + SOC Automation Enhancer ✅ Complete, Recruiter Case Study and Cross‑Domain Tie‑In upcoming
 
 This framework is designed for candidates who can attack, defend, and innovate with reproducibility and clarity.
 
@@ -139,7 +139,7 @@ This framework is designed for candidates who can attack, defend, and innovate w
   *Proof: see Exploitation + Replay screenshots in README*
 
 **Scaffolded for integration:**
-- `a1_adversarial_probe/`
+- `ai_adversarial_probe/`
 - `supply_chain_probe/`
 - `threat_growth_probe/`
 
